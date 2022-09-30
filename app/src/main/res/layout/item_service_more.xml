@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/parentt"
+    android:paddingTop="@dimen/_12sdp"
+    android:paddingHorizontal="@dimen/_12sdp">
+
+    <!--    <androidx.cardview.widget.CardView
+            android:id="@+id/serviceImageCardView"
+            android:layout_width="@dimen/_65sdp"
+            android:layout_height="@dimen/_48sdp"
+            app:cardCornerRadius="@dimen/_15sdp">
+
+            <ImageView
+                android:id="@+id/serviceImage"
+                android:scaleType="fitXY"
+                android:layout_width="@dimen/_65sdp"
+                android:layout_height="@dimen/_48sdp"
+                android:src="@drawable/slider_image1" />
+
+        </androidx.cardview.widget.CardView>-->
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/serviceImage"
+        android:layout_width="@dimen/_63sdp"
+        android:layout_height="@dimen/_45sdp"
+        android:scaleType="fitXY"
+        android:src="@drawable/hair_style_image"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize15Percent" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/_14sdp"
+        android:layout_toRightOf="@+id/serviceImage"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/serviceName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/hair_style"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12ssp" />
+
+        <TextView
+            android:id="@+id/serviceTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/service_time_30_min"
+            android:textColor="@color/app_blue_color"
+            android:textSize="@dimen/_11ssp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/priceDetails"
+        android:layout_width="@dimen/_55sdp"
+        android:layout_height="@dimen/_33sdp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/bg_price_border"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/serviceCost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:maxLength="6"
+            android:maxLines="1"
+            android:paddingHorizontal="@dimen/_5sdp"
+            android:text="@string/service_cost_10"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12ssp" />
+
+    </LinearLayout>
+</RelativeLayout>

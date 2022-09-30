@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.wemax.mtech">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- optional -->
+    <!-- map location permissions -->
+    <!-- <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" /> -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/img_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Wemax"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <activity
+            android:name=".Activity.auth.TouchAppointmentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.auth.PromoteBusinessActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Wemax.NoActionBarAndStatusBar" />
+        <activity
+            android:name=".Activity.auth.TouchVerificationActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Wemax.NoActionBarAndStatusBar" />
+        <activity
+            android:name=".Activity.chat.StatusActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.chat.NewGroupChatActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.notification.ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.chat.GroupChatActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.home.SearchActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            gr
+        </activity>
+        <activity
+            android:name=".Activity.groups.UserProfileActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.auth.ShareLocationActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Wemax.NoActionBarAndStatusBar" />
+        <activity
+            android:name=".Activity.auth.HobbiesInterestActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Wemax.NoActionBarAndStatusBar" />
+        <activity
+            android:name=".Activity.auth.BusinessOwnerActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Wemax.NoActionBarAndStatusBar" />
+        <activity
+            android:name=".Activity.auth.ForgetPasswordActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.home.serviceDetails.PickaServiceActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Wemax.NoActionBarAndStatusBar">
+
+            <!-- android:theme="@style/Theme.Wemax.NoActionBarAndStatusBar" -->
+
+        </activity>
+        <activity
+            android:name=".Activity.home.PlaceDetailsActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Wemax.NoActionBarAndStatusBar" />
+        <activity
+            android:name=".Activity.home.CreatePlaceToVisitActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.ReminderDetailsActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.auth.SignUpBusinessActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Wemax.NoActionBarAndStatusBar" />
+        <activity
+            android:name=".Activity.home.serviceDetails.SelectDateTimeActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Wemax.NoActionBarAndStatusBar" />
+        <activity
+            android:name=".Activity.groups.GroupInfoActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.AddParticipantsActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.chat.ChatActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.home.event.EventMembersActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.FriendsActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.InviteFriendsActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.groups.GroupNamePicActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.NewEditReminderActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.groups.SelectFriendsActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.groups.FindEventsActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.RecomendedForYouActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.groups.CreatePostActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Fragment.calendar.activities.CalendarEventActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Fragment.calendar.activities.AddReminderEventActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.CompleteProfileActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Wemax.NoActionBarAndStatusBar" />
+        <activity
+            android:name=".Activity.auth.SignUpActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Wemax.NoActionBarAndStatusBar" />
+        <activity
+            android:name=".Activity.OTPVerifyApointmentActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Wemax.NoActionBarAndStatusBar" />
+        <activity
+            android:name=".Activity.OTPVerificationActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Wemax.NoActionBarAndStatusBar" />
+        <activity
+            android:name=".Activity.groups.MyProfileActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.groups.MyGroupsActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.groups.GroupMembersActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.groups.GroupPostsActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.groups.PostDetailsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.groups.CreateGroupActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.home.serviceDetails.PhotoGalleryActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Wemax.NoActionBarAndStatusBar" />
+        <activity
+            android:name=".Activity.home.event.EventDetailsActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Wemax.NoActionBarAndStatusBar" />
+        <activity
+            android:name=".Activity.home.event.CreateEventActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <!--
+        <activity
+            android:name=".SplashSliderActivity"
+            android:exported="false" />
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/api_key_amd" />
+
+        <activity
+            android:name=".ServiceDetialsActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Wemax.NoActionBarAndStatusBar" />
+        <activity
+            android:name=".Activity.AddressesActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.auth.ContinueAsActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Wemax.NoActionBarAndStatusBar" />
+        <activity
+            android:name=".Activity.auth.LoginActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Wemax.NoActionBarAndStatusBar" />
+        <activity
+            android:name=".Activity.groups.InviteFriends2Activity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Wemax.NoActionBarAndStatusBar" />
+        <activity
+            android:name=".Activity.auth.WellcomeSliderActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.auth.HomeActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.wemax.mtech.SplashActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

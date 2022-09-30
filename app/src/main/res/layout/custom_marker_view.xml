@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/custom_marker_view"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_1sdp"
+    android:background="@color/transparent">
+
+    <RelativeLayout
+        android:id="@+id/loc_layout"
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_marker_bg"
+        android:padding="@dimen/_8sdp">
+
+        <ImageView
+            android:id="@+id/loc_pin"
+            android:layout_width="@dimen/_14sdp"
+            android:layout_height="@dimen/_17sdp"
+            android:layout_alignTop="@+id/locTitle"
+            android:layout_alignBottom="@+id/locText"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:contentDescription="@null"
+            android:src="@drawable/pin_icon" />
+
+        <TextView
+            android:id="@+id/locTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_8sdp"
+            android:layout_toRightOf="@+id/loc_pin"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/location_title"
+            android:textColor="@color/loc_titkle"
+            android:textSize="@dimen/_9ssp" />
+
+        <TextView
+            android:id="@+id/locText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/locTitle"
+            android:layout_marginHorizontal="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_2sdp"
+            android:layout_toRightOf="@+id/loc_pin"
+            android:fontFamily="@font/poppins_regular"
+            android:maxLines="1"
+            android:text="@string/location_text"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_9ssp" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/arrow_down"
+        android:layout_width="@dimen/_15sdp"
+        android:layout_height="@dimen/_15sdp"
+        android:layout_below="@+id/loc_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="-14dp"
+        android:src="@drawable/down_arrow_triangle" />
+
+    <ImageView
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_below="@+id/arrow_down"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:src="@drawable/pin_current"
+        android:visibility="gone" />
+</RelativeLayout>

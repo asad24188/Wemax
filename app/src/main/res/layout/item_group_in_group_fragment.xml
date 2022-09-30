@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parentItemDetail"
+    android:layout_width="@dimen/_130sdp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/_10sdp"
+    android:layout_marginBottom="@dimen/_7sdp"
+    app:cardCornerRadius="@dimen/_5sdp"
+    app:cardElevation="@dimen/_3sdp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/groupImage"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_85sdp"
+            android:scaleType="fitXY"
+            android:src="@drawable/group_dp_1" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_17sdp"
+            android:layout_alignBottom="@+id/groupImage"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/_7sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:background="@drawable/bg_slider_count_rounded"
+            android:paddingHorizontal="@dimen/_7sdp">
+
+
+            <TextView
+                android:id="@+id/groupPrivacyStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center"
+                android:text="@string/public_group"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_7ssp" />
+
+        </RelativeLayout>
+
+        <!--
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/image"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_90sdp"
+                    android:scaleType="fitXY"
+                    style="@style/ShapeAppearanceOverlay.App.CornerSize15Percent"
+                    android:src="@drawable/provider1" />
+        -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/groupImage"
+            android:orientation="vertical"
+            android:padding="@dimen/_8sdp">
+
+            <TextView
+                android:id="@+id/groupName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:includeFontPadding="false"
+                android:maxLines="2"
+                android:text="@string/nice_places_group_name"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_9ssp" />
+
+            <TextView
+                android:id="@+id/totalGroupMembers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:fontFamily="@font/poppins_light"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:text="@string/_1k_members"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_8ssp" />
+
+            <TextView
+                android:id="@+id/totalPostsAday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:fontFamily="@font/poppins_light"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:text="@string/_60_post_a_day"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/_8ssp" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

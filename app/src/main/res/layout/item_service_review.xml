@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="@dimen/_12sdp"
+    android:paddingVertical="@dimen/_6sdp">
+
+    <LinearLayout
+        android:id="@+id/userNameImageLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/userProfileImage"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:scaleType="fitXY"
+            android:src="@drawable/user_image"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize30Percent" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_14sdp"
+            android:layout_toRightOf="@+id/userProfileImage"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/userName"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sdp" />
+
+            <TextView
+                android:id="@+id/commentDateAndTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/review_day_and_date"
+                android:textColor="@color/see_all_text"
+                android:textSize="@dimen/_9ssp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/commentMsgLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/userNameImageLayout"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <!-- borjabravo library hamesha jCenter k sath chaly gi  -->
+        <com.borjabravo.readmoretextview.ReadMoreTextView
+            android:id="@+id/commentText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/review_text"
+            android:textColor="@color/see_all_text"
+            android:textSize="@dimen/_9ssp"
+            app:colorClickableText="@color/black"
+            app:trimCollapsedText="read less"
+            app:trimExpandedText="read more"
+            app:trimLength="90"
+            app:trimMode="trimModeLength" />
+
+        <!--        <TextView
+                    android:id="@+id/commentText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="@string/review_text"
+                    android:textColor="@color/see_all_text"
+                    android:textSize="@dimen/_9ssp" />-->
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/reviewLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/commentMsgLayout"
+        android:layout_marginTop="@dimen/_7sdp"
+        android:orientation="horizontal">
+
+
+
+        <!--    ref link -https://stackoverflow.com/questions/5800657/how-to-create-custom-ratings-bar-in-android#:~:text=You%20can%20create%20custom%20material,rating%20bar%20using%20progressDrawable%20attribute.&text=Below%20drawable%20xml%20uses%20thumbs%20up%20icon%20for%20rating%20bar.   -->
+
+
+        <!--
+                <RatingBar
+                    android:id="@+id/ratingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:isIndicator="true"
+                    android:maxHeight="18dp"
+                    android:minHeight="18dp"
+                    android:numStars="5"
+                    android:progressDrawable="@drawable/rating_bar"
+                    android:rating="4.5"
+                    android:stepSize="0.01" />
+        -->
+    <!--    ref link: https://github.com/williamyyu/SimpleRatingBar   , https://jitpack.io/p/ome450901/simpleratingbar  and  https://stackoverflow.com/questions/35378098/how-can-i-set-the-color-of-android-rating-bars-stroke-not-the-color-of-the-st    ,,,,,,     -->
+
+
+        <com.willy.ratingbar.ScaleRatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            app:srb_clearRatingEnabled="false"
+            app:srb_clickable="false"
+            app:srb_drawableEmpty="@drawable/ratingbar_empty"
+            app:srb_drawableFilled="@drawable/ratingbar_filled"
+            app:srb_isIndicator="false"
+            app:srb_minimumStars="1"
+            app:srb_numStars="5"
+            app:srb_rating="2.9"
+            app:srb_scrollable="false"
+            app:srb_starHeight="14dp"
+            app:srb_starPadding="@dimen/_2sdp"
+            app:srb_starWidth="14dp"
+            app:srb_stepSize="0.01"></com.willy.ratingbar.ScaleRatingBar>
+
+        <TextView
+            android:id="@+id/reviewValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_8sdp"
+            android:fontFamily="@font/poppins_medium_italic"
+            android:padding="@dimen/_2sdp"
+            android:text="@string/service_rating_value_details_activity"
+            android:textColor="@color/app_blue_color"
+            android:textSize="@dimen/_10ssp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_below="@+id/reviewLayout"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:background="@color/view_bar_color" />
+</RelativeLayout>

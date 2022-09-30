@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="slider_counting_color">#80000000</color>
+    <color name="border_color">#F9F9F9</color>
+    <color name="loc_border_color">#DEE0E6</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="comment_hint_color">#BCBCBC</color>
+
+    <color name="transparent">#0000ffff</color>
+    <color name="see_all_text">#A8A8A8</color>
+    <color name="app_blue_color">#38A1F3</color>
+    <color name="stroke_color">#BFBFBF</color>
+    <color name="app_blue_color_btn_outlint">#0079D8</color>
+    <color name="price_border_bg_color">#D6D6D6</color>
+    <color name="view_bar_color">#E6E6E6</color>
+    <color name="loc_titkle">#A1A2B1</color>
+    <color name="yellow_rate">#FDBA2E</color>
+    <color name="radius_color">#3397CB45</color>
+
+    <color name="purple">#81248A</color>
+    <color name="grey">#949494</color>
+    <color name="txt_black">#1D2226</color>
+    <color name="light_black">#1A1A1A</color>
+    <color name="pinck">#E70B89</color>
+    <color name="blue">#38A1F3</color>
+    <color name="gray">#919191</color>
+    <color name="light_gray">#9D9D9D</color>
+    <color name="dim_grey">#45707070</color>
+    <color name="create_event_bg">#F8F8F8</color>
+    <color name="et_borde_color">#D9D9D9</color>
+    <color name="et_borde_color2">#D6D6D6</color>
+    <color name="hint_color">#ABABAB</color>
+    <color name="dotted_button_color">#4150B8</color>
+    <color name="view_bar_color2">#F1F1F1</color>
+    <color name="comments_text_color">#A1A1A1</color>
+    <color name="dark_blue">#1F69F6</color>
+    <color name="timer_grey_home">#F8F8F8</color>
+    <color name="searchbox_grey_home">#DEDEDE</color>
+    <color name="searchbox_grey_home_amd">#8D8D8D</color>
+    <color name="light_pinck">#FBF7F6</color>
+    <color name="gray85">#D9D9D9</color>
+    <color name="pinck_shedow">#CCE70B89</color>
+    <color name="gray_smoke">#F8F8F8</color>
+
+    <color name="event_text_bg">#B2B1FE</color>
+    <color name="yellow_dark">#F1F100</color>
+    <color name="yellow_light">#FFFF85</color>
+    <color name="green_dark">#00D600</color>
+    <color name="green_light">#00FF00</color>
+    <color name="red_dark">#D40000</color>
+    <color name="red_light">#FF0000</color>
+    <color name="purple_dark">#8E8DFF</color>
+    <color name="purple_light">#B2B1FE</color>
+
+    <color name="themeColor1">#946c82</color>
+    <color name="themeColor2">#758b8b</color>
+    <color name="light_green">#00FF00</color>
+    <color name="yellow">#EEFF00</color>
+    <color name="red">#FF0000</color>
+    <color name="dark_gray">#F7F8FB</color>
+    <color name="grey_text">#A8A8A8</color>
+
+    <!--    <color name="custom_label_bg"> #707070</color>-->
+</resources>
