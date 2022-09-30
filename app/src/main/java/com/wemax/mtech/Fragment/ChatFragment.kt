@@ -32,12 +32,7 @@ class ChatFragment : Fragment() {
         _binding = FragmentChatBinding.inflate(inflater, container, false)
         val view = binding.root
 
-        binding.floatbtnLayout.setOnClickListener {
-            startActivity(Intent(context, SelectFriendsActivity::class.java))
-        }
-        binding.statust.setOnClickListener {
-            startActivity(Intent(context, StatusActivity::class.java))
-        }
+
 
         onClick()
         return view
@@ -45,6 +40,28 @@ class ChatFragment : Fragment() {
 
     private fun onClick() {
 
+        binding.floatbtnLayout.setOnClickListener {
+            if (binding.fabOptions.visibility==View.GONE){
+                binding.fabOptions.visibility=View.VISIBLE
+            }else{
+                binding.fabOptions.visibility=View.GONE
+            }
+        }
+        binding.statust.setOnClickListener {
+            startActivity(Intent(context, StatusActivity::class.java))
+        }
+        binding.fabOptions.setOnClickListener {
+            startActivity(Intent(context, SelectFriendsActivity::class.java))
+        }
+//        binding.backLayout.setOnClickListener {
+//            if (binding.fabOptions.visibility==View.GONE){
+//                binding.fabOptions.visibility=View.VISIBLE
+//                binding.backLayout.visibility=View.VISIBLE
+//            }else{
+//                binding.fabOptions.visibility=View.GONE
+//                binding.backLayout.visibility=View.GONE
+//            }
+//        }
         initRecyclerView()
         binding.recyclerInbox.layoutManager = LinearLayoutManager(requireContext())
         adapterComments = ChatAdapterr(requireContext(), listComments)

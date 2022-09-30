@@ -67,24 +67,33 @@
         android:layout_marginBottom="@dimen/_6sdp"
         android:paddingLeft="@dimen/_5sdp">
 
-
-        <com.google.android.material.imageview.ShapeableImageView
+        <androidx.cardview.widget.CardView
             android:id="@+id/userImageInComment"
-            android:layout_width="@dimen/_50sdp"
-            android:layout_height="@dimen/_50sdp"
-            android:layout_marginHorizontal="@dimen/_13sdp"
-            android:scaleType="fitXY"
-            android:src="@drawable/new_group_icon"
-            app:shapeAppearance="@style/ShapeAppearanceOverlay.App.CornerSize50Percent" />
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            app:cardCornerRadius="@dimen/_200sdp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ECECEC">
 
 
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/cam_ic"
+                    />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
         <EditText
             android:id="@+id/groupName"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="@dimen/_3sdp"
-            android:layout_marginRight="@dimen/_13sdp"
+            android:layout_marginHorizontal="@dimen/_7sdp"
             android:layout_toRightOf="@+id/userImageInComment"
             android:backgroundTint="@color/see_all_text"
             android:fontFamily="@font/poppins_regular"

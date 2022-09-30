@@ -125,13 +125,61 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/_11sdp"
             android:background="@color/border_color" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:background="@drawable/background_search_home"
+            android:paddingHorizontal="@dimen/_5sdp">
+
+            <EditText
+                android:id="@+id/search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:background="@null"
+                android:fontFamily="@font/poppins_light"
+                android:hint="search by wemax username or phone number"
+                android:textColor="@color/black"
+                android:textColorHint="@color/see_all_text"
+                android:textSize="@dimen/_9sdp" />
+
+
+            <RelativeLayout
+                android:id="@+id/btnSearchLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:id="@+id/btnSearch"
+                    android:layout_width="@dimen/_14sdp"
+                    android:layout_height="@dimen/_14sdp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_search"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    app:tint="@color/searchbox_grey_home_amd" />
+
+
+
+            </RelativeLayout>
+
+
+
+
+        </RelativeLayout>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/myFriendsRecycler"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:listitem="@layout/item_select_friend" />
-
+            android:layout_marginTop="@dimen/_15sdp"
+            />
     </LinearLayout>
 
 </RelativeLayout>

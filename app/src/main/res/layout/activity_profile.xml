@@ -115,7 +115,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Edit Personal Details"
+                    android:text="Show My Profile Page"
                     android:textSize="@dimen/_11ssp"
                     android:fontFamily="@font/poppins_regular"
                     android:includeFontPadding="false"
@@ -131,36 +131,6 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Manage Addresses"
-                    android:textSize="@dimen/_11ssp"
-                    android:fontFamily="@font/poppins_regular"
-                    android:includeFontPadding="false"
-                    android:textColor="@color/black"
-                    android:paddingStart="@dimen/_15sdp"
-                    android:foreground="?attr/selectableItemBackground"
-                    android:paddingVertical="@dimen/_15sdp" />
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/_1sdp"
-                    android:background="#F1F1F1"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Manage Credit Cards"
-                    android:textSize="@dimen/_11ssp"
-                    android:fontFamily="@font/poppins_regular"
-                    android:includeFontPadding="false"
-                    android:textColor="@color/black"
-                    android:paddingStart="@dimen/_15sdp"
-                    android:foreground="?attr/selectableItemBackground"
-                    android:paddingVertical="@dimen/_15sdp" />
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/_1sdp"
-                    android:background="#F1F1F1"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
                     android:text="General"
                     android:textSize="@dimen/_11ssp"
                     android:layout_marginTop="@dimen/_15sdp"
@@ -168,58 +138,33 @@
                     android:layout_marginHorizontal="@dimen/_15sdp"
                     android:fontFamily="@font/poppins_regular"
                     android:includeFontPadding="false"/>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_gravity="center_vertical"
-                    android:gravity="center_vertical"
-                    android:layout_marginTop="@dimen/_15sdp">
-                    <ImageView
-                        android:layout_width="@dimen/_16sdp"
-                        android:layout_height="@dimen/_16sdp"
-                        android:layout_marginStart="@dimen/_15sdp"
-                        android:layout_gravity="center_vertical"
-                        android:src="@drawable/heart_icon"/>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Saved Post"
-                        android:textSize="@dimen/_11ssp"
-                        android:fontFamily="@font/poppins_regular"
-                        android:includeFontPadding="false"
-                        android:layout_gravity="center_vertical"
-                        android:textColor="@color/black"
-                        android:layout_marginStart="@dimen/_12sdp"
-                        />
+                                <LinearLayout
+                                    android:id="@+id/myapointment"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_gravity="center_vertical"
+                                    android:gravity="center_vertical"
+                                    android:layout_marginTop="@dimen/_15sdp">
+                                    <ImageView
+                                        android:layout_width="@dimen/_16sdp"
+                                        android:layout_height="@dimen/_16sdp"
+                                        android:layout_marginStart="@dimen/_15sdp"
+                                        android:layout_gravity="center_vertical"
+                                        android:src="@drawable/manage_icon"/>
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="My Appointments"
+                                        android:textSize="@dimen/_11ssp"
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:includeFontPadding="false"
+                                        android:layout_gravity="center_vertical"
+                                        android:textColor="@color/black"
+                                        android:layout_marginStart="@dimen/_12sdp"
+                                        />
 
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_gravity="center_vertical"
-                    android:gravity="center_vertical"
-                    android:layout_marginTop="@dimen/_15sdp">
-                    <ImageView
-                        android:layout_width="@dimen/_16sdp"
-                        android:layout_height="@dimen/_16sdp"
-                        android:layout_marginStart="@dimen/_15sdp"
-                        android:layout_gravity="center_vertical"
-                        android:src="@drawable/manage_icon"/>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Manage Bookings"
-                        android:textSize="@dimen/_11ssp"
-                        android:fontFamily="@font/poppins_regular"
-                        android:includeFontPadding="false"
-                        android:layout_gravity="center_vertical"
-                        android:textColor="@color/black"
-                        android:layout_marginStart="@dimen/_12sdp"
-                        />
-
-                </LinearLayout>
+                                </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -238,6 +183,33 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Invite Friends"
+                        android:textSize="@dimen/_11ssp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:includeFontPadding="false"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/black"
+                        android:layout_marginStart="@dimen/_12sdp"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="@dimen/_15sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_16sdp"
+                        android:layout_height="@dimen/_16sdp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:src="@drawable/ic_terms" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Terms And Conditions"
                         android:textSize="@dimen/_11ssp"
                         android:fontFamily="@font/poppins_regular"
                         android:includeFontPadding="false"
