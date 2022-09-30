@@ -12,7 +12,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.viewpager.widget.PagerAdapter
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.wemax.mtech.Activity.RecomendedForYouActivity
+import com.wemax.mtech.Activity.auth.BusinessOwnerActivity
 import com.wemax.mtech.Activity.auth.HomeActivity
+import com.wemax.mtech.Activity.home.BookAppointmentActivity
 import com.wemax.mtech.Activity.home.SearchActivity
 import com.wemax.mtech.Activity.home.event.CreateEventActivity
 import com.wemax.mtech.Adapter.InviteFriendsAdapter
@@ -65,9 +67,39 @@ class HomeFragment : Fragment() {
     }
 
     private fun onClicks() {
-
         binding.floatbtnLayout.setOnClickListener {
-            startActivity(Intent(context, CreateEventActivity::class.java))
+            if (binding.fabOptions.visibility==View.GONE){
+                binding.fabOptions.visibility=View.VISIBLE
+                binding.backLayout.visibility=View.VISIBLE
+            }else{
+                binding.fabOptions.visibility=View.GONE
+                binding.backLayout.visibility=View.GONE
+            }
+        }
+        binding.backLayout.setOnClickListener {
+            if (binding.fabOptions.visibility==View.GONE){
+                binding.fabOptions.visibility=View.VISIBLE
+                binding.backLayout.visibility=View.VISIBLE
+            }else{
+                binding.fabOptions.visibility=View.GONE
+                binding.backLayout.visibility=View.GONE
+            }
+        }
+
+        binding.createEvent.setOnClickListener {
+            startActivity(Intent(context, CreateEventActivity::class.java)
+                .addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION))
+        }
+        binding.businessAcc.setOnClickListener {
+            startActivity(Intent(context, BusinessOwnerActivity::class.java)
+                .addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION))
+        }
+        binding.bookAppointment.setOnClickListener {
+            startActivity(Intent(context, BookAppointmentActivity::class.java)
+                .addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION))
+        }
+        binding.findActivity.setOnClickListener {
+            bottomNavigation.selectedItemId=R.id.searchFragment
         }
         searchAdapter()
         recommendedForYou()
@@ -192,7 +224,7 @@ class HomeFragment : Fragment() {
             LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
         binding.rcvFindSomthing.setHasFixedSize(true)
         newArrayList = arrayListOf()
-        getUserData()
+        getUserData3()
         binding.rcvFindSomthing.adapter =
             HomeFragmentServicesAdapter(requireContext(), newArrayList)
 
@@ -294,7 +326,7 @@ class HomeFragment : Fragment() {
         )
         newArrayList.add(
             PostModel(
-                R.drawable.provider1, getString(R.string.post_title),
+                R.drawable.provider2, "Paradise Beauty Salon",
                 getString(R.string.rating_text)
             )
         )
@@ -311,26 +343,53 @@ class HomeFragment : Fragment() {
             )
         )
     }
+    private fun getUserData3() {
+        newArrayList = arrayListOf()
+        newArrayList.add(
+            PostModel(
+                R.drawable.ic_park_view, getString(R.string.post_title),
+                getString(R.string.rating_text)
+            )
+        )
+        newArrayList.add(
+            PostModel(
+                R.drawable.ic_park_view, getString(R.string.post_title),
+                getString(R.string.rating_text)
+            )
+        )
+        newArrayList.add(
+            PostModel(
+                R.drawable.ic_park_view, getString(R.string.post_title),
+                getString(R.string.rating_text)
+            )
+        )
+        newArrayList.add(
+            PostModel(
+                R.drawable.ic_park_view, getString(R.string.post_title),
+                getString(R.string.rating_text)
+            )
+        )
+    }
 
     private fun getHotEventsData() {
         newArrayListHotEvents = arrayListOf()
         newArrayListHotEvents.add(
             HotEventsPostModel(
-                R.drawable.provider1, getString(R.string.post_title),
+                R.drawable.pic_main, "New Year Party",
                 getString(R.string.rating_text),
                 getString(R.string._2_km_away)
             )
         )
         newArrayListHotEvents.add(
             HotEventsPostModel(
-                R.drawable.provider1, getString(R.string.post_title),
+                R.drawable.pic_main, "New Year Party",
                 getString(R.string.rating_text),
                 getString(R.string._2_km_away)
             )
         )
         newArrayListHotEvents.add(
             HotEventsPostModel(
-                R.drawable.provider1, getString(R.string.post_title),
+                R.drawable.pic_main, getString(R.string.post_title),
                 getString(R.string.rating_text),
                 getString(R.string._2_km_away)
             )

@@ -62,6 +62,7 @@
     </RelativeLayout>
 
     <androidx.core.widget.NestedScrollView
+        android:layout_above="@+id/bottom_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/topBarLayout"
@@ -99,7 +100,9 @@
                     android:layout_height="@dimen/_35sdp"
                     android:layout_alignBottom="@+id/serviceImage"
                     android:layout_alignParentRight="true"
-                    android:layout_margin="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:layout_marginBottom="@dimen/_12sdp"
                     android:background="@drawable/btnreq_accept_bg"
                     android:fontFamily="@font/poppins_medium"
                     android:gravity="center"
@@ -109,6 +112,38 @@
                     android:text="@string/view_my_calendar"
                     android:textColor="@color/white"
                     android:textSize="@dimen/_10ssp" />
+
+                <LinearLayout
+                    android:id="@+id/joinChat"
+                    android:layout_width="@dimen/_120sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:layout_marginBottom="@dimen/_14sdp"
+                    android:layout_toStartOf="@+id/viewMyCalendar"
+                    android:background="@drawable/btnreq_accept_bg"
+                    android:backgroundTint="@color/white"
+                    android:gravity="center_horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/_12sdp"
+                        android:layout_height="@dimen/_12sdp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="@dimen/_8sdp"
+                        android:src="@drawable/chat_icon"
+                        app:tint="@color/blue" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="@string/join_chat"
+                        android:textColor="@color/blue"
+                        android:textSize="@dimen/_10ssp" />
+
+                </LinearLayout>
 
             </RelativeLayout>
 
@@ -357,97 +392,6 @@
                 </LinearLayout>
             </RelativeLayout>
 
-            <TextView
-                android:id="@+id/areYouGoingText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/_13sdp"
-                android:layout_marginTop="@dimen/_18sdp"
-                android:fontFamily="@font/poppins_regular"
-                android:text="Are You Going?"
-                android:textColor="@color/black"
-                android:textSize="@dimen/_10sdp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/_13sdp"
-                android:layout_marginTop="@dimen/_7sdp"
-                android:weightSum="2">
-
-                <LinearLayout
-                    android:id="@+id/denyButton"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="@dimen/_7sdp"
-                    android:layout_weight="1"
-                    android:gravity="center">
-
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/_33sdp"
-                        android:background="@drawable/deny_btn_bg"
-                        android:gravity="center">
-
-                        <ImageView
-                            android:id="@+id/crossImage"
-                            android:layout_width="@dimen/_6sdp"
-                            android:layout_height="@dimen/_6sdp"
-                            android:layout_centerVertical="true"
-                            android:src="@drawable/cancel_arrow" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerVertical="true"
-                            android:layout_marginLeft="@dimen/_10sdp"
-                            android:layout_toRightOf="@+id/crossImage"
-                            android:fontFamily="@font/poppins_medium"
-                            android:text="@string/deny"
-                            android:textColor="@color/black"
-                            android:textSize="@dimen/_10sdp" />
-                    </RelativeLayout>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/confirmButton"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/_7sdp"
-                    android:layout_weight="1"
-                    android:gravity="center">
-
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/_33sdp"
-                        android:background="@drawable/confirm_btn_bg"
-                        android:gravity="center">
-
-                        <ImageView
-                            android:id="@+id/tickImage"
-                            android:layout_width="@dimen/_7sdp"
-                            android:layout_height="@dimen/_7sdp"
-                            android:layout_centerVertical="true"
-                            android:src="@drawable/black_tick_mark"
-                            app:tint="@color/white" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerVertical="true"
-                            android:layout_marginLeft="@dimen/_10sdp"
-                            android:layout_toRightOf="@+id/tickImage"
-                            android:fontFamily="@font/poppins_medium"
-                            android:text="@string/confirm"
-                            android:textColor="@color/white"
-                            android:textSize="@dimen/_10sdp" />
-                    </RelativeLayout>
-                </LinearLayout>
-            </LinearLayout>
-
-
             <View
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_11sdp"
@@ -483,16 +427,28 @@
                 android:layout_height="@dimen/_11sdp"
                 android:layout_marginTop="@dimen/_16sdp"
                 android:background="@color/border_color" />
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/_13sdp"
+    android:layout_marginTop="@dimen/_16sdp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/bringing_list"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_10ssp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        android:text="(Must Pick At Least 1)"
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_10ssp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/_13sdp"
-                android:layout_marginTop="@dimen/_16sdp"
-                android:fontFamily="@font/poppins_medium"
-                android:text="@string/bringing_list"
-                android:textColor="@color/black"
-                android:textSize="@dimen/_12ssp" />
+</RelativeLayout>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerView_lablesBringingList"
@@ -504,6 +460,106 @@
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
     <!--    </LinearLayout>-->
+    <LinearLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:elevation="@dimen/_5sdp"
+        android:paddingVertical="@dimen/_12sdp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/areYouGoingText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_13sdp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Are You Going?"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10sdp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_13sdp"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:id="@+id/denyButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/_7sdp"
+                android:layout_weight="1"
+                android:gravity="center">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_33sdp"
+                    android:background="@drawable/deny_btn_bg"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/crossImage"
+                        android:layout_width="@dimen/_6sdp"
+                        android:layout_height="@dimen/_6sdp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/cancel_arrow" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_toRightOf="@+id/crossImage"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="@string/deny"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10sdp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/confirmButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_7sdp"
+                android:layout_weight="1"
+                android:gravity="center">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_33sdp"
+                    android:background="@drawable/confirm_btn_bg"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/tickImage"
+                        android:layout_width="@dimen/_7sdp"
+                        android:layout_height="@dimen/_7sdp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/black_tick_mark"
+                        app:tint="@color/white" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_toRightOf="@+id/tickImage"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="@string/confirm"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_10sdp" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
 
 
 </RelativeLayout>

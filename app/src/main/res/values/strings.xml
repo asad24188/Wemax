@@ -49,7 +49,7 @@
     <string name="office_cleaning">Office Cleaning</string>
     <string name="post_title">Bloomington Beauty Salon</string>
     <string name="rating_text">4.4</string>
-    <string name="recomemded_for_you">Recommended For You</string>
+    <string name="recomemded_for_you">Recommended Businesses For You</string>
     <string name="recomemded_events">Recommended Events</string>
     <string name="nearby_providers">Nearby Providers</string>
     <string name="book_appointment">Book Appointment\nwith us</string>
@@ -138,7 +138,7 @@
 
     <string name="july_monday_2022">July, Monday, 2022</string>
     <string name="appointment_for_barber">Appointment For Barber</string>
-    <string name="_12_00_am_2_00_am">12:00 AM - 2:00 AM</string>
+    <string name="_12_00_am_2_00_am">05:00 pm - 06:00 pm</string>
     <string name="my_next_event">My Next Event</string>
     <string name="_4h_32_min_2_sec">4H : 32 Min : 2 Sec</string>
 

@@ -3,7 +3,24 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidDevelopment/MTechSoft/WemaxApp/new/old/wemaxupdatedandroid/app/src/main/res/layout/activity_add_participants.xml" value="0.20416666666666666" />
+        <entry key="..\:/AndroidDevelopment/MTechSoft/WemaxApp/new/old/wemaxupdatedandroid/app/src/main/res/layout/activity_add_your_own.xml" value="0.20416666666666666" />
+        <entry key="..\:/AndroidDevelopment/MTechSoft/WemaxApp/new/old/wemaxupdatedandroid/app/src/main/res/layout/activity_add_your_own2.xml" value="0.2" />
+        <entry key="..\:/AndroidDevelopment/MTechSoft/WemaxApp/new/old/wemaxupdatedandroid/app/src/main/res/layout/activity_addresses.xml" value="0.20416666666666666" />
+        <entry key="..\:/AndroidDevelopment/MTechSoft/WemaxApp/new/old/wemaxupdatedandroid/app/src/main/res/layout/activity_book_appointment.xml" value="0.20416666666666666" />
+        <entry key="..\:/AndroidDevelopment/MTechSoft/WemaxApp/new/old/wemaxupdatedandroid/app/src/main/res/layout/activity_business_owner.xml" value="0.20416666666666666" />
+        <entry key="..\:/AndroidDevelopment/MTechSoft/WemaxApp/new/old/wemaxupdatedandroid/app/src/main/res/layout/activity_create_event.xml" value="0.20102564102564102" />
+        <entry key="..\:/AndroidDevelopment/MTechSoft/WemaxApp/new/old/wemaxupdatedandroid/app/src/main/res/layout/activity_event_details.xml" value="0.20416666666666666" />
+        <entry key="..\:/AndroidDevelopment/MTechSoft/WemaxApp/new/old/wemaxupdatedandroid/app/src/main/res/layout/activity_filter.xml" value="0.447265625" />
+        <entry key="..\:/AndroidDevelopment/MTechSoft/WemaxApp/new/old/wemaxupdatedandroid/app/src/main/res/layout/activity_find_business.xml" value="0.20416666666666666" />
+        <entry key="..\:/AndroidDevelopment/MTechSoft/WemaxApp/new/old/wemaxupdatedandroid/app/src/main/res/layout/activity_place_details.xml" value="0.16816816816816818" />
+        <entry key="..\:/AndroidDevelopment/MTechSoft/WemaxApp/new/old/wemaxupdatedandroid/app/src/main/res/layout/activity_search.xml" value="0.20416666666666666" />
+        <entry key="..\:/AndroidDevelopment/MTechSoft/WemaxApp/new/old/wemaxupdatedandroid/app/src/main/res/layout/activity_service_detials.xml" value="0.1865778200856735" />
         <entry key="..\:/AndroidDevelopment/MTechSoft/WemaxApp/new/old/wemaxupdatedandroid/app/src/main/res/layout/fragment_home.xml" value="0.20416666666666666" />
+        <entry key="..\:/AndroidDevelopment/MTechSoft/WemaxApp/new/old/wemaxupdatedandroid/app/src/main/res/layout/item_add_your_own.xml" value="0.20416666666666666" />
+        <entry key="..\:/AndroidDevelopment/MTechSoft/WemaxApp/new/old/wemaxupdatedandroid/app/src/main/res/layout/item_custom_label.xml" value="0.20416666666666666" />
+        <entry key="..\:/AndroidDevelopment/MTechSoft/WemaxApp/new/old/wemaxupdatedandroid/app/src/main/res/layout/labels_bringing_2nd_list.xml" value="0.20416666666666666" />
+        <entry key="..\:/AndroidDevelopment/MTechSoft/WemaxApp/new/old/wemaxupdatedandroid/app/src/main/res/layout/labels_bringing_ist_list.xml" value="0.20416666666666666" />
         <entry key="..\:/AndroidDevelopment/MTechSoft/WemaxApp/new/wemaxupdatedandroid/app/src/main/res/layout/activity_business_owner.xml" value="0.22" />
         <entry key="..\:/AndroidDevelopment/MTechSoft/WemaxApp/new/wemaxupdatedandroid/app/src/main/res/layout/activity_complete_profile.xml" value="0.20416666666666666" />
         <entry key="..\:/AndroidDevelopment/MTechSoft/WemaxApp/new/wemaxupdatedandroid/app/src/main/res/layout/activity_continue_as.xml" value="0.20416666666666666" />

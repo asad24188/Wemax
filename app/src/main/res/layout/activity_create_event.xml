@@ -70,12 +70,13 @@
                 android:background="@color/create_event_bg"
                 android:gravity="center"
                 android:orientation="vertical">
+
                 <ImageView
                     android:id="@+id/eventImage"
-                    android:visibility="gone"
-                    android:scaleType="fitCenter"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    android:layout_height="match_parent"
+                    android:scaleType="fitCenter"
+                    android:visibility="gone" />
 
                 <LinearLayout
                     android:id="@+id/uploadEventImage"
@@ -218,6 +219,7 @@
                     android:textSize="@dimen/_11ssp" />
 
             </RelativeLayout>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -227,6 +229,7 @@
                 android:text="Event Privacy"
                 android:textColor="@color/black"
                 android:textSize="@dimen/_12sdp" />
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -433,19 +436,27 @@
                 android:id="@+id/container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/_25sdp"
+                android:layout_marginHorizontal="@dimen/_13sdp"
                 android:layout_marginTop="@dimen/_14sdp"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:visibility="gone">
 
             </LinearLayout>
 
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcvLabels"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_13sdp"
+                android:layout_marginTop="@dimen/_14sdp"
+                tools:itemCount="2"
+                tools:listitem="@layout/item_custom_label" />
+
             <RelativeLayout
                 android:id="@+id/addCustomeLable"
-                android:layout_width="@dimen/_160sdp"
+                android:layout_width="match_parent"
                 android:layout_height="@dimen/_35sdp"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
-                android:layout_gravity="center_horizontal"
+                android:layout_marginHorizontal="@dimen/_13sdp"
                 android:layout_marginTop="@dimen/_22sdp"
                 android:background="@drawable/dotted_btn"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -459,7 +470,7 @@
                     android:layout_marginStart="@dimen/_5sdp"
                     android:fontFamily="@font/poppins_light"
                     android:includeFontPadding="false"
-                    android:text="@string/add_custom_label"
+                    android:text="Add Your Own"
                     android:textColor="@color/dotted_button_color"
                     android:textSize="@dimen/_9ssp" />
             </RelativeLayout>

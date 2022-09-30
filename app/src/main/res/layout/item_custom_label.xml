@@ -2,34 +2,75 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="@dimen/_5sdp">
+    android:layout_marginTop="@dimen/_8sdp">
 
     <RelativeLayout
         android:id="@+id/main_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/_2sdp"
-        android:layout_marginVertical="@dimen/_6sdp"
+        android:paddingVertical="@dimen/_10sdp"
         android:background="@drawable/custome_label_bg"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/labelName"
-            android:layout_width="match_parent"
-            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginVertical="@dimen/_10sdp"
-            android:layout_toLeftOf="@+id/icon_close"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_15sdp"
             android:fontFamily="@font/poppins_light"
             android:includeFontPadding="false"
             android:maxLines="1"
             android:text="Name"
             android:textColor="@color/black"
-            android:textSize="@dimen/_12ssp" />
+            android:textSize="@dimen/_11ssp" />
+        <View
+            android:id="@+id/view1"
+            android:layout_width="@dimen/_1sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/labelName"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:background="@color/grey"/>
+
+        <TextView
+            android:id="@+id/quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/view1"
+            android:fontFamily="@font/poppins_light"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:text="Name"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_11ssp" />
+        <View
+            android:id="@+id/view2"
+            android:layout_width="@dimen/_1sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/quantity"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:background="@color/grey"/>
+
+        <TextView
+            android:id="@+id/pickedBy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/view2"
+            android:fontFamily="@font/poppins_light"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:text="Name"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_11ssp" />
 
 
         <RelativeLayout
-            android:id="@+id/icon_close"
+            android:id="@+id/btnClose"
             android:layout_width="@dimen/_23sdp"
             android:layout_height="@dimen/_23sdp"
             android:layout_marginRight="@dimen/_8sdp"

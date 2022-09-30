@@ -119,9 +119,10 @@ class EventDetailsActivity : AppCompatActivity(), OnMapReadyCallback {
     }
 
     private fun initBringingLablesRecyclerView() {
-        listBringingLables.add(BringingModelClass("Cold Drink", R.drawable.cancel_arrow))
-        listBringingLables.add(BringingModelClass("Large Pizza", R.drawable.black_tick_mark))
-        listBringingLables.add(BringingModelClass("Juice", R.drawable.cancel_arrow))
+        listBringingLables.add(BringingModelClass("Cold Drink", "Asad"))
+        listBringingLables.add(BringingModelClass("Large Pizza", "Kamran"))
+        listBringingLables.add(BringingModelClass("Juice", "Waqar"))
+        listBringingLables.add(BringingModelClass("Cigaret", "Faraz"))
     }
 
     private fun getDataDialog() {
