@@ -26,6 +26,9 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".Activity.notification.MyAppointmentsDetailsActivity"
+            android:exported="false" />
+        <activity
             android:name=".Activity.auth.TouchAppointmentActivity"
             android:exported="false" />
         <activity
@@ -38,6 +41,12 @@
             android:theme="@style/Theme.Wemax.NoActionBarAndStatusBar" />
         <activity
             android:name=".Activity.chat.StatusActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.notification.ShowMyProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.notification.MyAppointmentsActivity"
             android:exported="false" />
         <activity
             android:name=".Activity.chat.NewGroupChatActivity"

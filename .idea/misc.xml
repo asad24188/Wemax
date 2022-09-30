@@ -59,12 +59,17 @@
         <entry key="..\:/Users/pc/Desktop/wemax_android/app/src/main/res/layout/fragment_profile.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/pc/Desktop/wemax_android/app/src/main/res/layout/item_status.xml" value="0.153125" />
         <entry key="..\:/Users/pc/Desktop/wemaxuserside/app/src/main/res/layout/activity_group_name_pic.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/pc/Desktop/wemaxuserside/app/src/main/res/layout/activity_my_appointments.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/pc/Desktop/wemaxuserside/app/src/main/res/layout/activity_my_appointments_details.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/pc/Desktop/wemaxuserside/app/src/main/res/layout/activity_new_group_chat.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/pc/Desktop/wemaxuserside/app/src/main/res/layout/activity_profile.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/pc/Desktop/wemaxuserside/app/src/main/res/layout/activity_select_friends.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/pc/Desktop/wemaxuserside/app/src/main/res/layout/activity_show_my_profile.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/pc/Desktop/wemaxuserside/app/src/main/res/layout/fragment_chat.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/pc/Desktop/wemaxuserside/app/src/main/res/layout/fragment_notification.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/pc/Desktop/wemaxuserside/app/src/main/res/layout/item_appointments.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/pc/Desktop/wemaxuserside/app/src/main/res/layout/item_recent_appoints.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/pc/Desktop/wemaxuserside/app/src/main/res/layout/item_upcoming_appoints.xml" value="0.20416666666666666" />
       </map>
     </option>
   </component>
