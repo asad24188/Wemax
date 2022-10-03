@@ -138,7 +138,7 @@
             <LinearLayout
                 android:id="@+id/recentapointment"
                 android:layout_width="90dp"
-                android:layout_height="@dimen/_36sdp"
+                android:layout_height="@dimen/_32sdp"
                 android:orientation="vertical"
                 android:layout_gravity="center"
                 android:gravity="center"
@@ -160,7 +160,7 @@
             <LinearLayout
                 android:id="@+id/upapointment"
                 android:layout_width="130dp"
-                android:layout_height="@dimen/_36sdp"
+                android:layout_height="@dimen/_32sdp"
                 android:orientation="vertical"
                 android:gravity="center"
                 android:background="@drawable/back_appoint2"

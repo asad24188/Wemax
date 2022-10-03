@@ -137,7 +137,7 @@
                         android:layout_toEndOf="@id/tv_donthave"
                         android:fontFamily="@font/poppins_regular"
                         android:includeFontPadding="false"
-                        android:text="@string/register_now"
+                        android:text="@string/sign_up_text"
                         android:textColor="@color/blue"
                         android:textSize="@dimen/_9ssp" />
                 </RelativeLayout>
