@@ -299,4 +299,5 @@
     <string name="closest_appointments_available">Closest Appointments Available</string>
     <string name="place_your_fingertip_on_the_scanner_to_continue">Place your fingertip on the scanner to continue</string>
     <string name="select_when_you_want_to_recieve">Select When You Want To Recieve Notifications About Switch Requests</string>
+    <string name="sign_up_text"><u>Sign Up</u></string>
 </resources>
