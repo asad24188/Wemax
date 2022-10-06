@@ -195,7 +195,7 @@ class CreateEventActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListe
 
 
             if (labelName.equals("")) {
-                utils.toastMessageAmd(contextActivity, "Label is Required")
+    //                utils.toastMessageAmd(contextActivity, "Label is Required")
             } else {
                 labelsListObj = LabelsModelClass()
 //                countryCode = c

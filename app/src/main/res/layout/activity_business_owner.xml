@@ -37,7 +37,7 @@
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_22sdp"
+                android:layout_height="@dimen/_24sdp"
                 android:layout_marginTop="@dimen/_8sdp"
                 android:src="@drawable/pro5" />
 
@@ -45,20 +45,20 @@
                 android:id="@+id/tv_continue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_28sdp"
+                android:layout_marginStart="@dimen/_20sdp"
                 android:layout_marginTop="@dimen/_25sdp"
                 android:fontFamily="@font/poppins_semibold"
                 android:includeFontPadding="false"
                 android:text="@string/are_you_a_business"
                 android:textColor="@color/txt_black"
-                android:textSize="@dimen/_20ssp" />
+                android:textSize="@dimen/_18ssp" />
 
             <TextView
                 android:id="@+id/tv_please"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/tv_continue"
-                android:layout_marginStart="@dimen/_28sdp"
+                android:layout_marginStart="@dimen/_20sdp"
                 android:layout_marginTop="@dimen/_3sdp"
                 android:fontFamily="@font/poppins_light"
                 android:includeFontPadding="false"
@@ -70,8 +70,8 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/btn_continue"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_40sdp"
-                android:layout_marginHorizontal="@dimen/_28sdp"
+                android:layout_height="@dimen/_42sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
                 android:layout_marginTop="@dimen/_50sdp"
                 android:foreground="?attr/selectableItemBackground"
                 app:cardBackgroundColor="@color/blue"
@@ -101,8 +101,8 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/btnNo"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_40sdp"
-                android:layout_marginHorizontal="@dimen/_28sdp"
+                android:layout_height="@dimen/_42sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
                 android:layout_marginTop="@dimen/_20sdp"
                 android:foreground="?attr/selectableItemBackground"
                 app:cardBackgroundColor="@color/red"

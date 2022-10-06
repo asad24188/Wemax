@@ -8,8 +8,7 @@ import com.wemax.mtech.databinding.ActivityShareLocationBinding
 
 class ShareLocationActivity : AppCompatActivity() {
     lateinit var binding: ActivityShareLocationBinding
-    val contextActivity = this@ShareLocationActivity
-    lateinit var utils: Utilities
+    lateinit var utilities: Utilities
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityShareLocationBinding.inflate(layoutInflater)
@@ -22,7 +21,8 @@ class ShareLocationActivity : AppCompatActivity() {
 
     private fun initViews() {
 
-        utils = Utilities(contextActivity)
+        utilities = Utilities(this@ShareLocationActivity)
+        utilities.setWhiteBars(this@ShareLocationActivity)
     }
 
     private fun onClicks() {

@@ -38,7 +38,7 @@
         <activity
             android:name=".Activity.auth.TouchVerificationActivity"
             android:exported="false"
-            android:theme="@style/Theme.Wemax.NoActionBarAndStatusBar" />
+             />
         <activity
             android:name=".Activity.chat.StatusActivity"
             android:exported="false" />
@@ -71,17 +71,17 @@
             android:name=".Activity.auth.ShareLocationActivity"
             android:exported="true"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.Wemax.NoActionBarAndStatusBar" />
+             />
         <activity
             android:name=".Activity.auth.HobbiesInterestActivity"
             android:exported="true"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.Wemax.NoActionBarAndStatusBar" />
+             />
         <activity
             android:name=".Activity.auth.BusinessOwnerActivity"
             android:exported="false"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.Wemax.NoActionBarAndStatusBar" />
+            />
         <activity
             android:name=".Activity.auth.ForgetPasswordActivity"
             android:exported="false"
@@ -178,12 +178,11 @@
             android:name=".Activity.CompleteProfileActivity"
             android:exported="true"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.Wemax.NoActionBarAndStatusBar" />
+            />
         <activity
             android:name=".Activity.auth.SignUpActivity"
             android:exported="true"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.Wemax.NoActionBarAndStatusBar" />
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Activity.OTPVerifyApointmentActivity"
             android:exported="true"
@@ -258,8 +257,7 @@
         <activity
             android:name=".Activity.auth.LoginActivity"
             android:exported="true"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.Wemax.NoActionBarAndStatusBar" />
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Activity.groups.InviteFriends2Activity"
             android:exported="true"
@@ -279,7 +277,7 @@
         <activity
             android:name="com.wemax.mtech.SplashActivity"
             android:exported="true"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

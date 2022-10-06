@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import com.hbb20.CountryCodePicker
+import com.remindrobort.app.utils.Utilities
 import com.wemax.mtech.Activity.OTPVerificationActivity
 import com.wemax.mtech.R
 import com.wemax.mtech.databinding.ActivitySignUpBinding
@@ -14,20 +15,28 @@ class SignUpActivity : AppCompatActivity(), CountryCodePicker.OnCountryChangeLis
     private var ccp: CountryCodePicker? = null
     private var countryCode: String? = null
     private var countryName: String? = null
+    private lateinit var utilities: Utilities
 
     lateinit var binding: ActivitySignUpBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySignUpBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR)
 
+
+        initViews()
         onClick()
 
+
+    }
+
+    private fun initViews() {
+        utilities = Utilities(this@SignUpActivity)
+        utilities.setWhiteBars(this@SignUpActivity)
         ccp = findViewById(R.id.ccp)
         ccp!!.setOnCountryChangeListener(this)
+        ccp!!.setDefaultCountryUsingNameCode("pk") //to set default country code as Japan
 
-        ccp!!.setDefaultCountryUsingNameCode("JP") //to set default country code as Japan
     }
 
     private fun onClick() {

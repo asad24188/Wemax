@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:scrollbars="none">
 
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -42,12 +43,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_28sdp"
-                android:layout_marginTop="@dimen/_75sdp"
+                android:layout_marginTop="@dimen/_95sdp"
                 android:fontFamily="@font/poppins_semibold"
                 android:includeFontPadding="false"
                 android:text="@string/sign_up"
                 android:textColor="@color/txt_black"
-                android:textSize="@dimen/_20ssp" />
+                android:textSize="@dimen/_18ssp" />
 
             <TextView
                 android:id="@+id/tv_please"
@@ -60,7 +61,7 @@
                 android:includeFontPadding="false"
                 android:text="@string/please_enter_your_details"
                 android:textColor="@color/see_all_text"
-                android:textSize="@dimen/_10ssp" />
+                android:textSize="@dimen/_9ssp" />
 
 
             <LinearLayout
@@ -88,7 +89,7 @@
                     <EditText
                         android:id="@+id/edt_fname"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="@dimen/_24sdp"
                         android:layout_below="@id/tv_fname"
                         android:layout_marginTop="@dimen/_2sdp"
                         android:background="@null"
@@ -97,7 +98,7 @@
                         android:inputType="text"
                         android:textColor="@color/txt_black"
                         android:textCursorDrawable="@null"
-                        android:textSize="@dimen/_12ssp" />
+                        android:textSize="@dimen/_11ssp" />
 
                     <View
                         android:id="@+id/viewbar_fname"
@@ -127,7 +128,7 @@
                     <EditText
                         android:id="@+id/edt_Username"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="@dimen/_24sdp"
                         android:layout_below="@id/tv_Username"
                         android:layout_marginTop="@dimen/_2sdp"
                         android:background="@null"
@@ -136,7 +137,7 @@
                         android:inputType="text"
                         android:textColor="@color/txt_black"
                         android:textCursorDrawable="@null"
-                        android:textSize="@dimen/_12ssp" />
+                        android:textSize="@dimen/_11ssp" />
 
                     <View
                         android:id="@+id/viewbar_Username"
@@ -166,7 +167,7 @@
                     <EditText
                         android:id="@+id/edt_email"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="@dimen/_24sdp"
                         android:layout_below="@id/tv_email"
                         android:layout_marginTop="@dimen/_2sdp"
                         android:background="@null"
@@ -175,7 +176,7 @@
                         android:inputType="textEmailAddress"
                         android:textColor="@color/txt_black"
                         android:textCursorDrawable="@null"
-                        android:textSize="@dimen/_12ssp" />
+                        android:textSize="@dimen/_11ssp" />
 
                     <View
                         android:id="@+id/viewbar_email"
@@ -204,15 +205,16 @@
                     <RelativeLayout
                         android:id="@+id/ccp_layout"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="@dimen/_24sdp"
                         android:layout_below="@id/tv_phone"
                         android:layout_marginTop="@dimen/_7sdp">
 
                         <com.hbb20.CountryCodePicker
                             android:id="@+id/ccp"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:layout_centerVertical="true"
+                            android:gravity="center_vertical"
                             app:ccp_arrowColor="@color/black"
                             app:ccp_contentColor="@color/black"
                             app:ccp_defaultNameCode="US"
@@ -226,17 +228,17 @@
                         <EditText
                             android:id="@+id/edt_phone"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:layout_centerVertical="true"
                             android:layout_marginStart="@dimen/_5sdp"
                             android:layout_toEndOf="@id/ccp"
                             android:background="@null"
                             android:fontFamily="@font/poppins_light"
                             android:includeFontPadding="false"
-                            android:inputType="number"
+                            android:inputType="phone"
                             android:textColor="@color/txt_black"
                             android:textCursorDrawable="@null"
-                            android:textSize="@dimen/_12ssp" />
+                            android:textSize="@dimen/_11ssp" />
 
 
                     </RelativeLayout>
@@ -269,7 +271,7 @@
                     <EditText
                         android:id="@+id/edt_password"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="@dimen/_24sdp"
                         android:layout_below="@id/tv_password"
                         android:layout_marginTop="@dimen/_2sdp"
                         android:background="@null"
@@ -278,7 +280,7 @@
                         android:inputType="textPassword"
                         android:textColor="@color/txt_black"
                         android:textCursorDrawable="@null"
-                        android:textSize="@dimen/_16ssp" />
+                        android:textSize="@dimen/_11ssp" />
 
                     <View
                         android:id="@+id/viewbar_pass"
@@ -292,9 +294,9 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/btn_signup"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_40sdp"
+                android:layout_height="@dimen/_42sdp"
                 android:layout_marginHorizontal="@dimen/_30sdp"
-                android:layout_marginTop="@dimen/_75sdp"
+                android:layout_marginTop="@dimen/_40sdp"
                 android:foreground="?attr/selectableItemBackground"
                 app:cardBackgroundColor="@color/blue"
                 app:cardCornerRadius="@dimen/_200sdp"
@@ -329,7 +331,7 @@
                 <RelativeLayout
                     android:id="@+id/already_acount"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/_30sdp"
                     android:layout_centerHorizontal="true">
 
                     <TextView
@@ -360,10 +362,11 @@
                 <RelativeLayout
                     android:id="@+id/terms_layout"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/_30sdp"
                     android:layout_below="@id/already_acount"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="@dimen/_11sdp">
+                    android:layout_marginHorizontal="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_3sdp">
 
                     <TextView
                         android:id="@+id/tv_term"

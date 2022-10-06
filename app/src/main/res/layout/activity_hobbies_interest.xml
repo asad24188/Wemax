@@ -39,7 +39,7 @@
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_22sdp"
+            android:layout_height="@dimen/_24sdp"
             android:src="@drawable/pro3"
             android:layout_marginTop="@dimen/_8sdp"/>
 
@@ -47,20 +47,20 @@
             android:id="@+id/tv_continue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_23sdp"
+            android:layout_marginStart="@dimen/_20sdp"
             android:layout_marginTop="@dimen/_25sdp"
             android:fontFamily="@font/poppins_semibold"
             android:includeFontPadding="false"
             android:text="@string/hobbies_and_interests"
             android:textColor="@color/txt_black"
-            android:textSize="@dimen/_20ssp" />
+            android:textSize="@dimen/_18ssp" />
 
         <TextView
             android:id="@+id/tv_please"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/tv_continue"
-            android:layout_marginStart="@dimen/_23sdp"
+            android:layout_marginStart="@dimen/_20sdp"
             android:layout_marginTop="@dimen/_3sdp"
             android:fontFamily="@font/poppins_light"
             android:includeFontPadding="false"
@@ -82,7 +82,7 @@
             <EditText
                 android:id="@+id/gotoSearcActvity"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="@dimen/_5sdp"
                 android:layout_marginRight="@dimen/_5sdp"
@@ -155,7 +155,7 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/btn_continue"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_40sdp"
+            android:layout_height="@dimen/_42sdp"
             android:layout_marginHorizontal="@dimen/_28sdp"
             android:layout_marginTop="@dimen/_25sdp"
             android:foreground="?attr/selectableItemBackground"

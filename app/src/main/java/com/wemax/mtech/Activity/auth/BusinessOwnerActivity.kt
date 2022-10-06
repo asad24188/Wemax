@@ -10,13 +10,11 @@ import com.wemax.mtech.databinding.ActivityBusinessOwnerBinding
 
 class BusinessOwnerActivity : AppCompatActivity() {
     lateinit var binding: ActivityBusinessOwnerBinding
-    val contextActivity = this@BusinessOwnerActivity
     lateinit var utils: Utilities
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityBusinessOwnerBinding.inflate(layoutInflater)
         setContentView(binding.root)
-//        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR)
 
         initViews()
         onClicks()
@@ -24,7 +22,8 @@ class BusinessOwnerActivity : AppCompatActivity() {
 
     private fun initViews() {
 
-        utils = Utilities(contextActivity)
+        utils = Utilities(this@BusinessOwnerActivity)
+        utils.setWhiteBars(this@BusinessOwnerActivity)
     }
 
     private fun onClicks() {

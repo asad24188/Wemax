@@ -1,13 +1,14 @@
 package com.wemax.mtech.Activity.home.serviceDetails
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.wemax.mtech.Adapter.home.serviceDetails.GalleryAdapter
 import com.wemax.mtech.Model.home.GalleryPhotoModel
 import com.wemax.mtech.R
 import com.wemax.mtech.databinding.ActivityPhotoGalleryBinding
+import com.wemax.mtech.utils.ItemDecoration
 
 class PhotoGalleryActivity : AppCompatActivity() {
 
@@ -29,6 +30,8 @@ class PhotoGalleryActivity : AppCompatActivity() {
         rvPhoto.layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
         adapter = GalleryAdapter(this, photoList)
         rvPhoto.adapter = adapter
+        val decoration = ItemDecoration(16)
+        rvPhoto.addItemDecoration(decoration)
 
         avengersAssemble()
     }

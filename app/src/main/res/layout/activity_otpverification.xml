@@ -97,6 +97,7 @@
                     android:inputType="text"
                     android:textColor="@color/txt_black"
                     android:textColorHint="@color/grey"
+
                     android:textCursorDrawable="@null"
                     android:textSize="@dimen/_13ssp" />
 

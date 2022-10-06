@@ -15,7 +15,6 @@ import com.wemax.mtech.databinding.ActivityWellcomeSliderBinding
 
 class WellcomeSliderActivity : AppCompatActivity() {
     lateinit var binding: ActivityWellcomeSliderBinding
-    val contextActivity = this@WellcomeSliderActivity
 
     lateinit var mPager: ViewPager
     private var currentPage = 0
@@ -23,26 +22,27 @@ class WellcomeSliderActivity : AppCompatActivity() {
     private var sliderImagesArrayList: ArrayList<WellcomeSliderModel> = arrayListOf()
     private var data_IMAGES: ArrayList<WellcomeSliderModel> = arrayListOf()
 
-/*
-        arrayOf<Int>(
-            R.drawable.ic_banner,
-            R.drawable.ic_banner2,
-            R.drawable.ic_banner3,
-            R.drawable.ic_banner4
-        )
-*/
 
-//    private var sliderImagesArray = arrayListOf<Int>()
 
     lateinit var indicator: CirclePageIndicator
-    private lateinit var utils: Utilities
+    private lateinit var utilities: Utilities
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityWellcomeSliderBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR)
 
+        initViews()
+        onClicks()
+        sliderCode()
+    }
+
+    private fun initViews() {
+        utilities = Utilities(this@WellcomeSliderActivity)
+        utilities.setWhiteBars(this@WellcomeSliderActivity)
+    }
+
+    private fun onClicks() {
         binding.btnext.setOnClickListener {
             startActivity(Intent(this, LoginActivity::class.java))
 
@@ -51,12 +51,9 @@ class WellcomeSliderActivity : AppCompatActivity() {
             startActivity(Intent(this, SignUpActivity::class.java))
 
         }
-        sliderCode()
     }
 
     private fun sliderCode() {
-//        data_IMAGES.add(R.drawable.ic_banner, "")
-        // add data in list
         data_IMAGES.add(
             WellcomeSliderModel(
                 R.drawable.ic_banner,
@@ -96,7 +93,7 @@ class WellcomeSliderActivity : AppCompatActivity() {
         indicator = findViewById<View>(R.id.indicator) as CirclePageIndicator
 
         mPager.setAdapter(
-            WellcomeSliderAdapter(contextActivity, sliderImagesArrayList)
+            WellcomeSliderAdapter(this@WellcomeSliderActivity, sliderImagesArrayList)
         )
 
         getCirclePagerIndicator()

@@ -20,7 +20,6 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/_28sdp"
                 android:orientation="vertical">
 
                 <View
@@ -29,14 +28,16 @@
 
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/_50sdp"
+                    android:layout_height="@dimen/_55sdp"
                     android:layout_marginTop="@dimen/_18sdp"
-                    android:src="@drawable/ic_splashlogo" />
+                    android:src="@drawable/ic_splashlogo"
+                    android:visibility="gone" />
 
                 <TextView
                     android:id="@+id/tv_login"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
                     android:layout_marginTop="@dimen/_25sdp"
                     android:fontFamily="@font/poppins_semibold"
                     android:includeFontPadding="false"
@@ -48,6 +49,7 @@
                     android:id="@+id/tv_please"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
                     android:layout_marginTop="@dimen/_3sdp"
                     android:fontFamily="@font/poppins_light"
                     android:includeFontPadding="false"
@@ -58,6 +60,7 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
                     android:layout_marginTop="@dimen/_24sdp">
 
                     <TextView
@@ -67,14 +70,14 @@
                         android:layout_marginTop="@dimen/_5sdp"
                         android:fontFamily="@font/poppins_regular"
                         android:includeFontPadding="false"
-                        android:text="@string/email"
+                        android:text="@string/emailorusername"
                         android:textColor="@color/grey"
                         android:textSize="@dimen/_11ssp" />
 
                     <EditText
                         android:id="@+id/edt_email"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="@dimen/_30sdp"
                         android:layout_below="@id/tv_email"
                         android:layout_marginTop="@dimen/_2sdp"
                         android:background="@null"
@@ -97,6 +100,7 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
                     android:layout_marginTop="@dimen/_25sdp">
 
                     <TextView
@@ -112,7 +116,7 @@
                     <EditText
                         android:id="@+id/edt_password"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="@dimen/_30sdp"
                         android:layout_below="@id/tv_password"
                         android:layout_marginTop="@dimen/_2sdp"
                         android:background="@null"
@@ -135,8 +139,9 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/btnlogin"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/_40sdp"
-                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_height="@dimen/_42sdp"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_24sdp"
                     android:foreground="?attr/selectableItemBackground"
                     app:cardBackgroundColor="@color/blue"
                     app:cardCornerRadius="@dimen/_200sdp"
@@ -165,9 +170,9 @@
                 <RelativeLayout
                     android:id="@+id/btn_signup"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="@dimen/_40sdp"
-                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_height="@dimen/_42sdp"
+                    android:layout_marginHorizontal="@dimen/_60sdp"
+                    android:layout_marginTop="@dimen/_16sdp"
                     android:background="@drawable/btn_custom_bg">
 
                     <TextView
@@ -186,10 +191,11 @@
                 <TextView
                     android:id="@+id/tv_forgot"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/_20sdp"
                     android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="@dimen/_13sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
                     android:fontFamily="@font/poppins_regular"
+                    android:gravity="center_vertical"
                     android:includeFontPadding="false"
                     android:text="@string/forgot_password"
                     android:textColor="@color/see_all_text"
@@ -202,89 +208,98 @@
                     android:layout_marginTop="@dimen/_20sdp"
                     android:fontFamily="@font/poppins_medium"
                     android:includeFontPadding="false"
-                    android:text="@string/or_login_with"
+                    android:text="@string/or_signup_with"
                     android:textColor="@color/see_all_text"
                     android:textSize="@dimen/_10ssp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/_55sdp"
+                    android:layout_height="wrap_content"
                     android:layout_marginHorizontal="@dimen/_5sdp"
                     android:layout_marginTop="@dimen/_18sdp"
+                    android:gravity="center"
                     android:orientation="horizontal"
-                    android:weightSum="4">
 
-                    <androidx.cardview.widget.CardView
+                    >
+
+                    <RelativeLayout
+
                         android:id="@+id/icon_gmail"
-                        android:layout_width="@dimen/_40sdp"
-                        android:layout_height="@dimen/_40sdp"
-                        android:layout_marginHorizontal="@dimen/_9sdp"
-                        android:layout_weight="1"
-                        android:foreground="?attr/selectableItemBackground"
-                        android:outlineSpotShadowColor="@color/pinck_shedow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         app:cardCornerRadius="@dimen/_100sdp"
                         app:cardElevation="@dimen/_4sdp">
 
-                        <ImageView
-                            android:layout_width="@dimen/_18sdp"
-                            android:layout_height="@dimen/_18sdp"
-                            android:layout_gravity="center"
-                            android:src="@drawable/ic_gmail" />
-                    </androidx.cardview.widget.CardView>
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_6sdp"
+                            android:layout_marginEnd="@dimen/_8sdp"
+                            android:layout_marginBottom="@dimen/_16sdp"
+                            android:background="@drawable/roundback"
+                            android:backgroundTint="@color/white"
+                            android:elevation="@dimen/_6ssp"
+                            android:padding="@dimen/_12ssp">
 
-                    <androidx.cardview.widget.CardView
+                            <ImageView
+                                android:layout_width="@dimen/_18sdp"
+                                android:layout_height="@dimen/_18sdp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_gmail" />
+                        </RelativeLayout>
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
                         android:id="@+id/icon_fb"
-                        android:layout_width="@dimen/_40sdp"
-                        android:layout_height="@dimen/_40sdp"
-                        android:layout_marginHorizontal="@dimen/_9sdp"
-                        android:layout_weight="1"
-                        android:foreground="?attr/selectableItemBackground"
-                        android:outlineSpotShadowColor="@color/pinck_shedow"
-                        app:cardCornerRadius="@dimen/_100sdp"
-                        app:cardElevation="@dimen/_4sdp">
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        >
 
-                        <ImageView
-                            android:layout_width="@dimen/_18sdp"
-                            android:layout_height="@dimen/_18sdp"
-                            android:layout_gravity="center"
-                            android:src="@drawable/ic_fb" />
-                    </androidx.cardview.widget.CardView>
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_6sdp"
+                            android:layout_marginEnd="@dimen/_8sdp"
+                            android:layout_marginBottom="@dimen/_16sdp"
+                            android:background="@drawable/roundback"
+                            android:backgroundTint="@color/white"
+                            android:elevation="@dimen/_6ssp"
+                            android:padding="@dimen/_12ssp">
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/icon_apple"
-                        android:layout_width="@dimen/_40sdp"
-                        android:layout_height="@dimen/_40sdp"
-                        android:layout_marginHorizontal="@dimen/_9sdp"
-                        android:layout_weight="1"
-                        android:foreground="?attr/selectableItemBackground"
-                        android:outlineSpotShadowColor="@color/pinck_shedow"
-                        app:cardCornerRadius="@dimen/_100sdp"
-                        app:cardElevation="@dimen/_4sdp">
+                            <ImageView
+                                android:layout_width="@dimen/_18sdp"
+                                android:layout_height="@dimen/_18sdp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_fb" />
+                        </RelativeLayout>
+                    </RelativeLayout>
 
-                        <ImageView
-                            android:layout_width="@dimen/_18sdp"
-                            android:layout_height="@dimen/_18sdp"
-                            android:layout_gravity="center"
-                            android:src="@drawable/ic_apple" />
-                    </androidx.cardview.widget.CardView>
 
-                    <androidx.cardview.widget.CardView
+                    <RelativeLayout
                         android:id="@+id/icon_phone"
-                        android:layout_width="@dimen/_40sdp"
-                        android:layout_height="@dimen/_40sdp"
-                        android:layout_marginHorizontal="@dimen/_9sdp"
-                        android:layout_weight="1"
-                        android:foreground="?attr/selectableItemBackground"
-                        android:outlineSpotShadowColor="@color/pinck_shedow"
-                        app:cardCornerRadius="@dimen/_100sdp"
-                        app:cardElevation="@dimen/_4sdp">
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
 
-                        <ImageView
-                            android:layout_width="@dimen/_18sdp"
-                            android:layout_height="@dimen/_18sdp"
-                            android:layout_gravity="center"
-                            android:src="@drawable/ic_mobile" />
-                    </androidx.cardview.widget.CardView>
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_6sdp"
+                            android:layout_marginEnd="@dimen/_8sdp"
+                            android:layout_marginBottom="@dimen/_16sdp"
+                            android:background="@drawable/roundback"
+                            android:backgroundTint="@color/white"
+                            android:elevation="@dimen/_6ssp"
+                            android:padding="@dimen/_12ssp">
+
+                            <ImageView
+                                android:layout_width="@dimen/_18sdp"
+                                android:layout_height="@dimen/_18sdp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_mobile" />
+                        </RelativeLayout>
+                    </RelativeLayout>
 
                 </LinearLayout>
 
@@ -292,7 +307,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="@dimen/_12sdp">
+                    android:layout_marginTop="@dimen/_16sdp">
 
                     <TextView
                         android:id="@+id/tv_donthave"

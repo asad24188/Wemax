@@ -9,6 +9,7 @@ import android.view.View
 import android.widget.ImageView
 import com.github.dhaval2404.imagepicker.ImagePicker
 import com.google.android.material.imageview.ShapeableImageView
+import com.remindrobort.app.utils.Utilities
 import com.wemax.mtech.Activity.auth.HomeActivity
 import com.wemax.mtech.Activity.auth.ShareLocationActivity
 import com.wemax.mtech.R
@@ -16,14 +17,27 @@ import com.wemax.mtech.databinding.ActivityCompleteProfileBinding
 
 class CompleteProfileActivity : AppCompatActivity() {
     lateinit var binding: ActivityCompleteProfileBinding
-
+    private lateinit var utilities: Utilities
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityCompleteProfileBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR)
 
+
+        initViews()
         click()
+
+
+
+
+    }
+
+    private fun initViews() {
+        utilities = Utilities(this@CompleteProfileActivity)
+        utilities.setWhiteBars(this@CompleteProfileActivity)
+    }
+
+    private fun click() {
         binding.profileImage.setOnClickListener {
             ImagePicker.with(this)
                 .crop()
@@ -31,12 +45,6 @@ class CompleteProfileActivity : AppCompatActivity() {
                 .maxResultSize(1080, 1080)
                 .start()
         }
-
-
-
-    }
-
-    private fun click() {
         binding.arrowBack.setOnClickListener { finish() }
         binding.btnContinue.setOnClickListener {
             startActivity(Intent(this, ShareLocationActivity::class.java))

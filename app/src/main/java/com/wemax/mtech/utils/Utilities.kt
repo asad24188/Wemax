@@ -10,17 +10,25 @@ import android.graphics.Color
 import android.net.ConnectivityManager
 import android.net.NetworkInfo
 import android.os.Build
+import android.text.TextUtils
 import android.util.Base64
 import android.util.Log
+import android.util.Patterns
 import android.view.View
 import android.view.Window
 import android.view.WindowManager
+import android.view.inputmethod.InputMethodManager
+import android.widget.ImageView
+import android.widget.LinearLayout
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat.startActivity
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.FragmentManager
 import com.google.android.material.snackbar.Snackbar
+import com.wemax.mtech.R
+import org.aviran.cookiebar2.CookieBar
 import java.security.MessageDigest
 import java.security.NoSuchAlgorithmException
 import java.text.SimpleDateFormat
@@ -108,20 +116,6 @@ class Utilities(context: Context) {
     }
 
 
-/*    fun saveStrings(
-        context: Context, key: String, value: String
-    ) {
-        val sharedPref = context.getSharedPreferences("loginshared", Context.MODE_PRIVATE)
-        val editor = sharedPref.edit()
-        editor.putString(key, value)
-        editor.apply()
-    }
-
-    fun getStrings(context: Context, key: String): String {
-        val sharedPref = context.getSharedPreferences("loginshared", Context.MODE_PRIVATE)
-        return sharedPref.getString(key, "").toString()
-    }*/
-
 
     fun saveBoolean(
         context: Context, key: String, value: Boolean
@@ -195,70 +189,12 @@ class Utilities(context: Context) {
         val value = SimpleDateFormat("dd/MM/yyyy").format(Date(timestampString * 1000))
     }
 
-    //    var labelsTextsList: ArrayList<BodyRequestResponse> = arrayListOf()
-/*
-    var reminderId = ""
-    var reminderName = ""
-    var reminderPhone = ""
-    var reminderHours = ""
-    var reminderMints = ""*/
-
-/*
-    private fun eventOnBackpressed() {
-        val myIntent = Intent(this@Login, ContinueAs::class.java)
-        myIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
-        startActivity(myIntent)
-    }
-*/
-
-    fun toastMessageAmd(context: Context, message: String) {
-        Toast.makeText(
-            context,
-            message,
-            Toast.LENGTH_SHORT
-        ).show()
-    }
-
-    fun logcatMessage(key: String, value: String) {
-        Log.d(log_amd + key, value)
-    }
-
-    fun noInternetToast() {
-        Toast.makeText(
-            context,
-            "No Internet Connection",
-            Toast.LENGTH_SHORT
-        ).show()
-    }
-
-    fun snackBar(view: View, message: String) {
-        Snackbar.make(view, message, Snackbar.LENGTH_LONG).show()
-/*
-        val snack = Snackbar.make(view, message, Snackbar.LENGTH_LONG)
-        snack.show()
-*/
-    }
 
 
-    var log_amd = "amd:- "
-//    var dateFormat = ""
-
-    var listOfSelectedHours_GlobalArrayList: ArrayList<String> = arrayListOf()
-    //todo:  set statusbar text visibility, iska bg theme.xml me set kiya h
-    fun statusBarTextColorVisibility(window: Window) {
-//        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
-        window.getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
-    }
-
-    //todo: transparent toolbar code
-    fun transparentToolbar(window: Window, context: Context) {
-        window.getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
-        window.decorView.systemUiVisibility =
-            View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-        if (Build.VERSION.SDK_INT >= 21) {
-            setWindowFlag(context as Activity)
-            window.statusBarColor = Color.TRANSPARENT
-        }
+    fun hideSoftKeyboard(activity: Activity) {
+        val inputMethodManager: InputMethodManager =
+            activity.getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
+        inputMethodManager.hideSoftInputFromWindow(activity.currentFocus!!.windowToken, 0)
     }
 
     fun setWindowFlag(activity: Activity) {
@@ -267,6 +203,98 @@ class Utilities(context: Context) {
         winParams.flags =
             winParams.flags and WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS.inv()
         win.attributes = winParams
+    }
+
+    fun showSuccessToast(context: Activity?, msg: String?) {
+        CookieBar.build(context).setCustomView(R.layout.custom_banner)
+            .setCustomViewInitializer { view: View ->
+                val cookie = view.findViewById<LinearLayout>(R.id.ll_cookie)
+                val ivIcon =
+                    view.findViewById<ImageView>(R.id.iv_icon)
+                val tvTitle = view.findViewById<TextView>(R.id.tv_title)
+                val tvMessage = view.findViewById<TextView>(R.id.tv_message)
+                tvTitle.text = "Success!"
+                tvMessage.text = msg
+                ivIcon.setImageResource(R.drawable.ic_baseline_sentiment_satisfied)
+                cookie.setBackgroundResource(R.drawable.banner_primary_color_corner10dp)
+            }
+            .setCookiePosition(CookieBar.TOP)
+            .setDuration(3000)
+            .setEnableAutoDismiss(true) // Cookie will stay on display until manually dismissed
+            .setSwipeToDismiss(true) // Deny dismiss by swiping off the view
+            .show()
+    }
+
+    fun showFailureToast(context: Activity?, msg: String?) {
+        CookieBar.build(context).setCustomView(R.layout.custom_banner)
+            .setCustomViewInitializer { view: View ->
+                val cookie = view.findViewById<LinearLayout>(R.id.ll_cookie)
+                val ivIcon =
+                    view.findViewById<ImageView>(R.id.iv_icon)
+                val tvTitle = view.findViewById<TextView>(R.id.tv_title)
+                val tvMessage = view.findViewById<TextView>(R.id.tv_message)
+                tvTitle.text = "Failed!"
+                tvMessage.text = msg
+                ivIcon.setImageResource(R.drawable.ic_baseline_warning_24)
+                cookie.setBackgroundResource(R.drawable.banner_primary_color_corner10dp)
+            }
+            .setCookiePosition(CookieBar.TOP)
+            .setDuration(3000)
+            .setEnableAutoDismiss(true) // Cookie will stay on display until manually dismissed
+            .setSwipeToDismiss(true) // Deny dismiss by swiping off the view
+            .show()
+    }
+    fun showSuccessToast(context: Activity?, title: String?, msg: String?) {
+        CookieBar.build(context).setCustomView(R.layout.custom_banner)
+            .setCustomViewInitializer { view: View ->
+                val cookie = view.findViewById<LinearLayout>(R.id.ll_cookie)
+                val ivIcon =
+                    view.findViewById<ImageView>(R.id.iv_icon)
+                val tvTitle = view.findViewById<TextView>(R.id.tv_title)
+                val tvMessage = view.findViewById<TextView>(R.id.tv_message)
+                tvTitle.text = title
+                tvMessage.text = msg
+                ivIcon.setImageResource(R.drawable.ic_baseline_sentiment_satisfied)
+                cookie.setBackgroundResource(R.drawable.banner_primary_color_corner10dp)
+            }
+            .setCookiePosition(CookieBar.TOP)
+            .setDuration(3000)
+            .setEnableAutoDismiss(true) // Cookie will stay on display until manually dismissed
+            .setSwipeToDismiss(true) // Deny dismiss by swiping off the view
+            .show()
+    }
+
+    fun showFailureToast(context: Activity?, title: String?, msg: String?) {
+        CookieBar.build(context).setCustomView(R.layout.custom_banner)
+            .setCustomViewInitializer { view: View ->
+                val cookie = view.findViewById<LinearLayout>(R.id.ll_cookie)
+                val ivIcon =
+                    view.findViewById<ImageView>(R.id.iv_icon)
+                val tvTitle = view.findViewById<TextView>(R.id.tv_title)
+                val tvMessage = view.findViewById<TextView>(R.id.tv_message)
+                tvTitle.text = title
+                tvMessage.text = msg
+                ivIcon.setImageResource(R.drawable.ic_warning_sign)
+                cookie.setBackgroundResource(R.drawable.banner_primary_color_corner10dp)
+            }
+            .setCookiePosition(CookieBar.TOP)
+            .setDuration(3000)
+            .setEnableAutoDismiss(true) // Cookie will stay on display until manually dismissed
+            .setSwipeToDismiss(true) // Deny dismiss by swiping off the view
+            .show()
+    }
+    fun showNoInternetToast(context: Activity?) {
+        CookieBar.build(context)
+            .setTitle("Can not connect to Internet!")
+            .setMessage("Make sure you have internet connection and Try again!")
+            .setIcon(R.drawable.ic_baseline_wifi_off_24)
+            .setCookiePosition(CookieBar.TOP)
+            .setDuration(3000)
+            .setBackgroundColor(com.borjabravo.readmoretextview.R.color.colorPrimary)
+            .show()
+    }
+    fun isValidEmail(target: CharSequence?): Boolean {
+        return !TextUtils.isEmpty(target) && Patterns.EMAIL_ADDRESS.matcher(target!!).matches()
     }
 
 }

@@ -58,12 +58,14 @@
     <string name="login">Login</string>
     <string name="please_login_to">Please login to your account.</string>
     <string name="email">Email</string>
+    <string name="emailorusername">Email or Username</string>
     <string name="sunilkargwal_gmail_com">sunilkargwal@gmail.com</string>
     <string name="password">Password</string>
     <string name="pass">* * * * *</string>
     <string name="login_btn">LOGIN</string>
     <string name="forgot_password">Forgot Password?</string>
     <string name="or_login_with">or login with</string>
+    <string name="or_signup_with">or Sign Up With</string>
     <string name="by_signing_up">By signing up, you are agree with our</string>
     <string name="terms_conditions"><u><![CDATA[Terms & Conditions]]></u></string>
     <string name="addresses">Addresses</string>
