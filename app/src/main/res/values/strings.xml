@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Wemax</string>
-    <string name="book_now">Book Appointment</string>
+    <string name="book_now">Book Now</string>
     <string name="services">Services : </string>
     <string name="location_title">Location : </string>
     <string name="location_title_gray">Location</string>
@@ -140,7 +140,7 @@
     <string name="appointment_for_barber">Appointment For Barber</string>
     <string name="_12_00_am_2_00_am">05:00 pm - 06:00 pm</string>
     <string name="my_next_event">My Next Event</string>
-    <string name="_4h_32_min_2_sec">4H : 32 Min : 2 Sec</string>
+    <string name="_4h_32_min_2_sec">7H : 19 Min : 22 Sec</string>
 
     <string name="sign_up">Sign Up</string>
 

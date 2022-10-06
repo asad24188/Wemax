@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/parentProductDetail"
     android:layout_width="@dimen/_120sdp"
-    android:layout_height="@dimen/_130sdp"
+    android:layout_height="@dimen/_120sdp"
     android:layout_marginVertical="@dimen/_6sdp"
     android:layout_marginStart="@dimen/_13sdp"
     app:cardCornerRadius="@dimen/_5sdp"
@@ -49,18 +49,18 @@
                 android:textColor="@color/black"
                 android:textSize="@dimen/_9ssp" />
 
-            <TextView
-                android:id="@+id/postDistance"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/postTitle"
-                android:layout_marginHorizontal="@dimen/_10sdp"
-                android:layout_marginTop="@dimen/_3sdp"
-                android:fontFamily="@font/poppins_light"
-                android:includeFontPadding="false"
-                android:text="@string/_2_km_away"
-                android:textColor="@color/grey"
-                android:textSize="@dimen/_8ssp" />
+<!--            <TextView-->
+<!--                android:id="@+id/postDistance"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@+id/postTitle"-->
+<!--                android:layout_marginHorizontal="@dimen/_10sdp"-->
+<!--                android:layout_marginTop="@dimen/_3sdp"-->
+<!--                android:fontFamily="@font/poppins_light"-->
+<!--                android:includeFontPadding="false"-->
+<!--                android:text="@string/_2_km_away"-->
+<!--                android:textColor="@color/grey"-->
+<!--                android:textSize="@dimen/_8ssp" />-->
 
         </RelativeLayout>
 

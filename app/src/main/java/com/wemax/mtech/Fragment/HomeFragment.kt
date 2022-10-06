@@ -216,7 +216,6 @@ class HomeFragment : Fragment() {
         newArrayListHotEvents = arrayListOf()
         getHotEventsData()
         binding.rcvHotEvents.adapter = HotEventsAdapter(requireContext(), newArrayListHotEvents)
-
     }
 
     private fun findSomethingToDo() {
@@ -226,7 +225,7 @@ class HomeFragment : Fragment() {
         newArrayList = arrayListOf()
         getUserData3()
         binding.rcvFindSomthing.adapter =
-            HomeFragmentServicesAdapter(requireContext(), newArrayList)
+            HomeFragmentPlacesAdapter(requireContext(), newArrayList)
 
     }
 
@@ -347,19 +346,19 @@ class HomeFragment : Fragment() {
         newArrayList = arrayListOf()
         newArrayList.add(
             PostModel(
-                R.drawable.ic_park_view, getString(R.string.post_title),
+                R.drawable.ic_park_view1, "US National Park",
                 getString(R.string.rating_text)
             )
         )
         newArrayList.add(
             PostModel(
-                R.drawable.ic_park_view, getString(R.string.post_title),
+                R.drawable.ic_park_view,"Clay County Little Rain Lake Park",
                 getString(R.string.rating_text)
             )
         )
         newArrayList.add(
             PostModel(
-                R.drawable.ic_park_view, getString(R.string.post_title),
+                R.drawable.ic_park_view1, "US National Park",
                 getString(R.string.rating_text)
             )
         )
