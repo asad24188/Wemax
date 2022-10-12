@@ -27,17 +27,27 @@ import com.google.android.gms.maps.model.MarkerOptions
 import com.remindrobort.app.utils.Utilities
 import com.viewpagerindicator.CirclePageIndicator
 import com.wemax.mtech.Adapter.ChipsAdapter
+import com.wemax.mtech.Adapter.NewReminderAdapter
 import com.wemax.mtech.Adapter.VideoPagerSliderAdapter
 import com.wemax.mtech.Adapter.home.event.AcceptedAdapter
+import com.wemax.mtech.Adapter.home.serviceDetails.FindSomeThingAdapter
+import com.wemax.mtech.Adapter.home.serviceDetails.ServiceReviewsAdapter
 import com.wemax.mtech.Model.AcceptedModel
 import com.wemax.mtech.Model.ChipsTagsModel
 import com.wemax.mtech.Model.VideosPlaceDetailsModel
+import com.wemax.mtech.Model.calendarReminder.NewReminderModel
+import com.wemax.mtech.Model.groups.PostModel
+import com.wemax.mtech.Model.serviceDetailsModel.ServicesReviewsModel
 import com.wemax.mtech.R
 import com.wemax.mtech.databinding.ActivityPlaceDetailsBinding
 import kotlinx.android.synthetic.main.calendar_cell.*
 
 
 class PlaceDetailsActivity : AppCompatActivity(), OnMapReadyCallback {
+    lateinit var newArrayList: java.util.ArrayList<PostModel>
+    lateinit var adapterReviewsSerview: ServiceReviewsAdapter
+    val listReviewSerives: ArrayList<ServicesReviewsModel> = arrayListOf()
+    var listGroupMembers: ArrayList<NewReminderModel> = arrayListOf()
     lateinit var binding: ActivityPlaceDetailsBinding
     val contextActivity = this@PlaceDetailsActivity
     lateinit var utils: Utilities
@@ -95,7 +105,122 @@ class PlaceDetailsActivity : AppCompatActivity(), OnMapReadyCallback {
 
 
         chipsLayoutManager()
+        binding.recyclerFriendshared.layoutManager = LinearLayoutManager(contextActivity)
+        data()
+        binding.recyclerFriendshared.adapter = NewReminderAdapter(contextActivity, listGroupMembers)
 
+        initReviewsServices()
+        binding.servicesReviewsRecyclerView.layoutManager = LinearLayoutManager(contextActivity)
+        adapterReviewsSerview = ServiceReviewsAdapter(contextActivity, listReviewSerives)
+        binding.servicesReviewsRecyclerView.adapter = adapterReviewsSerview
+
+        binding.findBusinessesRecyclerView.layoutManager =
+            LinearLayoutManager(contextActivity, LinearLayoutManager.HORIZONTAL, false)
+//        binding.findBusinessesRecyclerView.setHasFixedSize(true)
+        newArrayList = arrayListOf<PostModel>()
+        getPostData()
+        binding.findBusinessesRecyclerView.adapter =
+            FindSomeThingAdapter(contextActivity, newArrayList)
+    }
+
+    private fun getPostData() {
+        newArrayList = arrayListOf()
+        newArrayList.add(
+            PostModel(
+                R.drawable.provider1, getString(R.string.post_title),
+                getString(R.string.rating_text)
+            )
+        )
+        newArrayList.add(
+            PostModel(
+                R.drawable.provider1, getString(R.string.post_title),
+                getString(R.string.rating_text)
+            )
+        )
+        newArrayList.add(
+            PostModel(
+                R.drawable.provider1, getString(R.string.post_title),
+                getString(R.string.rating_text)
+            )
+        )
+        newArrayList.add(
+            PostModel(
+                R.drawable.provider1, getString(R.string.post_title),
+                getString(R.string.rating_text)
+            )
+        )
+    }
+
+    private fun initReviewsServices() {
+        listReviewSerives.add(
+            ServicesReviewsModel(
+                "",
+                R.drawable.user_image,
+                getString(R.string.userName),
+                getString(R.string.review_day_and_date),
+                getString(R.string.review_text),
+                getString(R.string.service_rating_value_details_activity)
+            )
+        )
+        listReviewSerives.add(
+            ServicesReviewsModel(
+                "",
+                R.drawable.user_image,
+                getString(R.string.userName),
+                getString(R.string.review_day_and_date),
+                getString(R.string.review_text),
+                "3.7"
+            )
+        )
+
+        listReviewSerives.add(
+            ServicesReviewsModel(
+                "",
+                R.drawable.user_image,
+                getString(R.string.userName),
+                getString(R.string.review_day_and_date),
+                getString(R.string.review_text),
+                "2.5"
+            )
+        )
+        /* listReviewSerives.add(
+             ServicesReviewsModel(
+                 "",
+                 R.drawable.user_image,
+                 getString(R.string.userName),
+                 getString(R.string.review_day_and_date),
+                 getString(R.string.review_text),
+                 getString(R.string.service_rating_value_details_activity)
+             )
+         )*/
+
+    }
+
+    private fun data() {
+        listGroupMembers.add(
+            NewReminderModel(
+                "",
+                R.drawable.ic_user_img2,
+                resources.getString(R.string.cordelia_john),
+                false,
+            )
+        )
+        listGroupMembers.add(
+            NewReminderModel(
+                "",
+                R.drawable.ic_user_img3,
+                resources.getString(R.string.olive),
+                true
+            )
+        )
+        listGroupMembers.add(
+            NewReminderModel(
+                "",
+                R.drawable.ic_user_img1,
+                resources.getString(R.string.william),
+                false
+            )
+        )
     }
 
     private fun chipsLayoutManager() {

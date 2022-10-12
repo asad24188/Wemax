@@ -83,9 +83,9 @@
 
 
                 <EditText
-                    android:id="@+id/edt_fname"
+                    android:id="@+id/edOtp"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/_30sdp"
                     android:layout_centerVertical="true"
                     android:layout_marginStart="@dimen/_12sdp"
                     android:layout_marginTop="@dimen/_2sdp"
@@ -99,14 +99,14 @@
                     android:textColorHint="@color/grey"
 
                     android:textCursorDrawable="@null"
-                    android:textSize="@dimen/_13ssp" />
+                    android:textSize="@dimen/_11ssp" />
 
                 <View
                     android:id="@+id/viewbar_fname"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_1sdp"
-                    android:layout_below="@id/edt_fname"
-                    android:layout_marginTop="@dimen/_3sdp"
+                    android:layout_below="@id/edOtp"
+                    android:layout_marginTop="@dimen/_8sdp"
                     android:background="@color/blue" />
             </RelativeLayout>
 
@@ -204,4 +204,16 @@
             </RelativeLayout>
         </LinearLayout>
     </ScrollView>
+    <com.agrawalsuneet.dotsloader.loaders.TrailingCircularDotsLoader
+        android:id="@+id/dotloader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:trailingcircular_animDelay="600"
+        app:trailingcircular_animDuration="1200"
+        app:trailingcircular_bigCircleRadius="24dp"
+        android:visibility="gone"
+        app:trailingcircular_dotsColor="@color/app_blue_color_btn_outlint"
+        app:trailingcircular_dotsRadius="@dimen/_5sdp"
+        app:trailingcircular_noOfTrailingDots="5" />
 </RelativeLayout>

@@ -1,6 +1,7 @@
 package com.wemax.mtech.Activity.home.event
 
 import android.app.Activity
+import android.app.AlertDialog
 import android.app.DatePickerDialog
 import android.app.TimePickerDialog
 import android.content.Intent
@@ -10,17 +11,16 @@ import android.os.Bundle
 import android.view.Gravity
 import android.view.View
 import android.widget.*
-import androidx.appcompat.app.AlertDialog
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.beloo.widget.chipslayoutmanager.ChipsLayoutManager
 import com.github.dhaval2404.imagepicker.ImagePicker
 import com.wemax.mtech.Model.home.event.LabelsModelClass
 import com.remindrobort.app.utils.Utilities
-import com.wemax.mtech.Activity.InviteFriendsActivity
 import com.wemax.mtech.Adapter.ChipsAdapter
 import com.wemax.mtech.Adapter.NewReminderAdapter
 import com.wemax.mtech.Adapter.groups.CustomSpinnerAdapter
+import com.wemax.mtech.Adapter.home.event.LabelAdapter
 import com.wemax.mtech.Model.ChipsTagsModel
 import com.wemax.mtech.Model.calendarReminder.NewReminderModel
 import com.wemax.mtech.R
@@ -98,8 +98,14 @@ class CreateEventActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListe
         }
 
         binding.addCustomeLable.setOnClickListener {
-            getDataDialog()
+            startActivity(Intent(this, AddYourOwnActivity::class.java)
+                .addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION))
         }
+        binding.rcvLabels.layoutManager=
+            LinearLayoutManager(this)
+        binding.rcvLabels.setHasFixedSize(true)
+        getLabels()
+        binding.rcvLabels.adapter=LabelAdapter(this,labelsList)
         binding.backpress.setOnClickListener { finish() }
         pickDate()
 
@@ -107,6 +113,12 @@ class CreateEventActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListe
         initRecyclerView()
         binding.recyclerFriendshared.adapter = NewReminderAdapter(contextActivity, listGroupMembers)
 
+    }
+
+    private fun getLabels() {
+        labelsList= arrayListOf()
+        labelsList.add(LabelsModelClass("Cigaret","10","Faraz"))
+        labelsList.add(LabelsModelClass("Cigaret","10","Faraz"))
     }
 
     private fun initRecyclerView() {
@@ -199,7 +211,7 @@ class CreateEventActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListe
             } else {
                 labelsListObj = LabelsModelClass()
 //                countryCode = c
-                labelsListObj.label = labelName
+//                labelsListObj.label = labelName
                 addnew()
                 builder.dismiss()
             }
@@ -217,18 +229,65 @@ class CreateEventActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListe
         binding.container.addView(v)
 
         var name = v.findViewById<TextView>(R.id.labelName)
-        name.text = labelsListObj.label
+        /*name.text = labelsListObj.label
 
         val icon_close = v.findViewById<RelativeLayout>(R.id.icon_close)
         icon_close.setOnClickListener {
             removeview(v)
-        }
+        }*/
 
     }
 
     fun removeview(view: View) {
         binding.container.removeView(view)
     }
+//    private fun getDataDialog() {
+//
+//        val builder = AlertDialog.Builder(this, R.style.CustomAlertDialog)
+//            .create()
+//        val view = layoutInflater.inflate(R.layout.popup_add_custom_label, null)
+//
+//        val eventName = view.findViewById<EditText>(R.id.eventName_et)
+//        val btnsave = view.findViewById<CardView>(R.id.btnsave)
+//
+//        btnsave.setOnClickListener {
+//            labelName = eventName.text.toString()
+//
+//            if (labelName.equals("")) {
+//                utils.toastMessageAmd(contextActivity, "Label is Required")
+//            } else {
+//                labelsListObj = LabelsModelClass()
+////                countryCode = c
+//                labelsListObj.Item = labelName
+//                addnew()
+//                builder.dismiss()
+//            }
+//
+//
+//        }
+//
+//        builder.setView(view)
+//        builder.setCanceledOnTouchOutside(true)
+//        builder.show()
+//    }
+//
+//    fun addnew() {
+//        val v: View = layoutInflater.inflate(R.layout.item_custom_label, null)
+//        binding.container.addView(v)
+//
+//        var name = v.findViewById<TextView>(R.id.labelName)
+//        name.text = labelsListObj.Item
+//
+//        val icon_close = v.findViewById<RelativeLayout>(R.id.btnClose)
+//        icon_close.setOnClickListener {
+//            removeview(v)
+//        }
+//
+//    }
+//
+//    fun removeview(view: View) {
+//        binding.container.removeView(view)
+//    }
 
     private fun getDateTimeCalender() {
         val cal = Calendar.getInstance()

@@ -216,13 +216,14 @@
                             android:layout_centerVertical="true"
                             android:gravity="center_vertical"
                             app:ccp_arrowColor="@color/black"
+                            app:ccp_autoDetectCountry="true"
                             app:ccp_contentColor="@color/black"
-                            app:ccp_defaultNameCode="US"
-                            app:ccp_defaultPhoneCode="1"
+                            app:ccp_defaultNameCode="pk"
                             app:ccp_padding="0dp"
                             app:ccp_showArrow="true"
-                            app:ccp_showFlag="true"
-                            app:ccp_showNameCode="false"
+                            app:ccp_showFlag="false"
+                            app:ccp_showNameCode="true"
+                            app:ccp_showPhoneCode="true"
                             app:ccp_textSize="@dimen/_11sdp" />
 
                         <EditText
@@ -395,4 +396,16 @@
             </RelativeLayout>
         </LinearLayout>
     </ScrollView>
+    <com.agrawalsuneet.dotsloader.loaders.TrailingCircularDotsLoader
+        android:id="@+id/dotloader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:trailingcircular_animDelay="600"
+        app:trailingcircular_animDuration="1200"
+        app:trailingcircular_bigCircleRadius="24dp"
+        android:visibility="gone"
+        app:trailingcircular_dotsColor="@color/app_blue_color_btn_outlint"
+        app:trailingcircular_dotsRadius="@dimen/_5sdp"
+        app:trailingcircular_noOfTrailingDots="5" />
 </RelativeLayout>

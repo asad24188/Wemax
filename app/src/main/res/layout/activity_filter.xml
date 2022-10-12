@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.home.FilterActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:cardElevation="@dimen/_10sdp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <LinearLayout
+                android:id="@+id/backpress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_12sdp"
+                android:padding="@dimen/_5sdp">
+
+                <ImageView
+                    android:layout_width="@dimen/_12sdp"
+                    android:layout_height="@dimen/_12sdp"
+                    android:src="@drawable/back_arrow" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/topView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_medium"
+                android:includeFontPadding="false"
+                android:text="Filter"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp" />
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:id="@+id/search_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginHorizontal="@dimen/_13sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/invitefriend_searchbg"
+                android:paddingStart="@dimen/_11sdp">
+
+
+                <ImageView
+                    android:id="@+id/search_icon"
+                    android:layout_width="@dimen/_28sdp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:paddingEnd="@dimen/_14sdp"
+                    android:src="@drawable/ic_feather_search" />
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toStartOf="@+id/search_icon"
+                    android:background="@null"
+                    android:fontFamily="@font/poppins_regular"
+                    android:hint="@string/search"
+                    android:includeFontPadding="false"
+                    android:inputType="text"
+                    android:paddingEnd="@dimen/_5sdp"
+                    android:textColorHint="@color/see_all_text"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/_10ssp" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_13sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/location"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp" />
+
+            <RelativeLayout
+                android:id="@+id/pickDate"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_38sdp"
+                android:layout_marginHorizontal="@dimen/_13sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:background="@drawable/create_event_et_bg"
+                android:paddingHorizontal="@dimen/_15sdp">
+
+                <ImageView
+                    android:id="@+id/imageDate"
+                    android:layout_width="@dimen/_12sdp"
+                    android:layout_height="@dimen/_12sdp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/blue_marker" />
+
+                <TextView
+                    android:id="@+id/tvDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_16sdp"
+                    android:layout_toRightOf="@+id/imageDate"
+                    android:fontFamily="@font/poppins_light"
+                    android:text="8614 Mcclellan Rd New York, United States"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/hint_color"
+                    android:textSize="@dimen/_10ssp" />
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_13sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Price Range"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp" />
+
+<!--            <com.google.android.material.slider.RangeSlider-->
+<!--                android:id="@+id/range_slider_price"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="@dimen/_20sdp"-->
+<!--                android:stepSize="5000"-->
+<!--                android:valueFrom="0"-->
+<!--                android:valueTo="100000"-->
+<!--                app:minimumSeparation="40dp" />-->
+
+            <com.google.android.material.slider.RangeSlider
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:stepSize="5000"
+                android:valueFrom="0"
+                android:layout_marginHorizontal="@dimen/_13sdp"
+                android:valueTo="100000"
+                app:haloRadius="0dp"
+                app:labelBehavior="visible"
+                app:thumbColor="@color/blue"
+                app:thumbRadius="@dimen/_12ssp"
+                app:tickVisible="true"
+                app:trackColorActive="@color/blue"
+                app:trackColorInactive="@color/grey_text"
+                app:trackHeight="@dimen/_4sdp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_13sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Stars In Reviews"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:orientation="horizontal">
+
+                <com.willy.ratingbar.ScaleRatingBar
+                    android:id="@+id/ratingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    app:srb_clearRatingEnabled="false"
+                    app:srb_clickable="false"
+                    app:srb_drawableEmpty="@drawable/ratingbar_staroff2"
+                    app:srb_drawableFilled="@drawable/ratingbar_filled"
+                    app:srb_isIndicator="false"
+                    app:srb_minimumStars="1"
+                    app:srb_numStars="5"
+                    app:srb_rating="2.9"
+                    app:srb_scrollable="false"
+                    app:srb_starHeight="@dimen/_20sdp"
+                    app:srb_starPadding="@dimen/_2sdp"
+                    app:srb_starWidth="@dimen/_20sdp"
+                    app:srb_stepSize="0.01" />
+
+                <View
+                    android:layout_width="@dimen/_1sdp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:background="@color/grey_text" />
+
+                <TextView
+                    android:id="@+id/reviewValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:padding="@dimen/_2sdp"
+                    android:text="@string/service_rating_value_details_activity"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12ssp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_13sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Recommended To"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_13sdp"
+                tools:listitem="@layout/item_chips_interest" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_13sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Opening And Closing Time"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginTop="@dimen/_15sdp"
+    android:layout_marginHorizontal="@dimen/_13sdp"
+    android:weightSum="2">
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Opening Time"
+            android:includeFontPadding="false"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_9ssp" />
+
+        <RelativeLayout
+            android:id="@+id/pickTime"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_38sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:background="@drawable/create_event_et_bg"
+            android:paddingHorizontal="@dimen/_15sdp">
+
+            <ImageView
+                android:id="@+id/imageTime"
+                android:layout_width="@dimen/_12sdp"
+                android:layout_height="@dimen/_12sdp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/blue_clock_watch" />
+
+            <TextView
+                android:id="@+id/tvTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_16sdp"
+                android:layout_toRightOf="@+id/imageTime"
+                android:fontFamily="@font/poppins_light"
+                android:text="Select  Time"
+                android:textColor="@color/black"
+                android:textColorHint="@color/hint_color"
+                android:textSize="@dimen/_10ssp" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+    <View
+        android:layout_width="@dimen/_15sdp"
+        android:layout_height="fill_parent"/>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Closing Time"
+            android:includeFontPadding="false"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_9ssp" />
+
+        <RelativeLayout
+            android:id="@+id/pickTime2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_38sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:background="@drawable/create_event_et_bg"
+            android:paddingHorizontal="@dimen/_15sdp">
+
+            <ImageView
+                android:id="@+id/imageTime2"
+                android:layout_width="@dimen/_12sdp"
+                android:layout_height="@dimen/_12sdp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/blue_clock_watch" />
+
+            <TextView
+                android:id="@+id/tvTime2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_16sdp"
+                android:layout_toRightOf="@+id/imageTime2"
+                android:fontFamily="@font/poppins_light"
+                android:text="Select  Time"
+                android:textColor="@color/black"
+                android:textColorHint="@color/hint_color"
+                android:textSize="@dimen/_10ssp" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/btn_next"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginHorizontal="@dimen/_28sdp"
+                android:layout_marginVertical="@dimen/_25sdp"
+                android:foreground="?attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/blue"
+                app:cardCornerRadius="@dimen/_200sdp"
+                app:cardElevation="0dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:includeFontPadding="false"
+                        android:text="Search"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_13sdp" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

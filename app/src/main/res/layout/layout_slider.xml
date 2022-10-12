@@ -12,29 +12,31 @@
         android:layout_height="match_parent"
         android:background="#40000000"
         />
+
     <TextView
+        android:id="@+id/imageTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/image_title"
-        android:id="@+id/imageTitle"
-        android:textSize="@dimen/_16ssp"
-        android:fontFamily="@font/poppins_semi_bold"
         android:layout_marginStart="@dimen/_15sdp"
         android:layout_marginTop="@dimen/_20sdp"
+        android:fontFamily="@font/poppins_semi_bold"
         android:includeFontPadding="false"
-        android:textColor="@color/white"/>
+        android:text="@string/image_title"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_13ssp" />
+
     <TextView
+        android:id="@+id/imageDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/slider_image_description"
-        android:id="@+id/imageDescription"
-        android:textSize="@dimen/_10ssp"
-        android:fontFamily="@font/poppins_regular"
+        android:layout_below="@+id/imageTitle"
         android:layout_marginStart="@dimen/_15sdp"
         android:layout_marginTop="@dimen/_8sdp"
-        android:layout_below="@+id/imageTitle"
+        android:layout_marginEnd="@dimen/_150sdp"
+        android:fontFamily="@font/poppins_regular"
         android:includeFontPadding="false"
-        android:layout_marginEnd="@dimen/_100sdp"
-        android:textColor="@color/white"/>
+        android:text="@string/slider_image_description"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_8ssp" />
 
 </RelativeLayout>

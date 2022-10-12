@@ -39,7 +39,7 @@ class AdapterRecomendedFor(val context: Context, val list: ArrayList<PostModel>)
         holder.rating.text = model.postRating
         holder.parentProductDetail.setOnClickListener {
 //            context.startActivity(Intent(context, PlaceDetailsActivity::class.java))
-            context.startActivity(Intent(context, ServiceDetialsActivity::class.java))
+            context.startActivity(Intent(context, PlaceDetailsActivity::class.java))
         }
     }
 

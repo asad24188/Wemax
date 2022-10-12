@@ -9,25 +9,24 @@ import com.remindrobort.app.utils.Utilities
 import com.wemax.mtech.Adapter.AdapterRecomendedFor
 import com.wemax.mtech.Model.groups.PostModel
 import com.wemax.mtech.R
-import com.wemax.mtech.databinding.ActivityPlaceDetailsBinding
-import com.wemax.mtech.databinding.ActivitySearchBinding
+import com.wemax.mtech.databinding.ActivityFindBusinessBinding
 import java.util.ArrayList
 
-class   SearchActivity : AppCompatActivity() {
-    lateinit var binding: ActivitySearchBinding
-    val contextActivity = this@SearchActivity
+class FindBusinessActivity : AppCompatActivity() {
+    val contextActivity = this@FindBusinessActivity
     lateinit var utils: Utilities
+
     private lateinit var adapterGrid: AdapterRecomendedFor
     private lateinit var listGrid: ArrayList<PostModel>
+    lateinit var binding:ActivityFindBusinessBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivitySearchBinding.inflate(layoutInflater)
+        binding= ActivityFindBusinessBinding.inflate(layoutInflater)
         setContentView(binding.root)
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR)
         initViews()
         onClicks()
     }
-
     private fun initViews() {
         utils = Utilities(contextActivity)
     }
@@ -40,8 +39,22 @@ class   SearchActivity : AppCompatActivity() {
         listGrid = ArrayList()
         listGrid.add(
             PostModel(
+                R.drawable.provider1,
+                getString(R.string.post_title),
+                getString(R.string.rating_text)
+            )
+        )
+        listGrid.add(
+            PostModel(
                 R.drawable.provider2,
                 getString(R.string.post_title1),
+                getString(R.string.rating_text)
+            )
+        )
+        listGrid.add(
+            PostModel(
+                R.drawable.provider1,
+                getString(R.string.post_title),
                 getString(R.string.rating_text)
             )
         )
@@ -93,13 +106,9 @@ class   SearchActivity : AppCompatActivity() {
         binding.recyclerRecomended.adapter = adapterGrid
 
         binding.floatbtnLayout.setOnClickListener {
+
             startActivity(Intent(contextActivity, CreatePlaceToVisitActivity::class.java))
         }
 
-    }
-
-    override fun onBackPressed() {
-        super.onBackPressed()
-        overridePendingTransition(0,0)
     }
 }

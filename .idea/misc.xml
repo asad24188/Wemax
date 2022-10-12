@@ -86,9 +86,17 @@
         <entry key="..\:/wemaxuserside/app/src/main/res/drawable-anydpi/ic_baseline_wifi_off_24.xml" value="0.124" />
         <entry key="..\:/wemaxuserside/app/src/main/res/drawable-anydpi/ic_warning_sign.xml" value="0.124" />
         <entry key="..\:/wemaxuserside/app/src/main/res/drawable/roundback.xml" value="0.1745" />
+        <entry key="..\:/wemaxuserside/app/src/main/res/layout/activity_add_participants.xml" value="0.25416666666666665" />
+        <entry key="..\:/wemaxuserside/app/src/main/res/layout/activity_add_your_own.xml" value="0.25416666666666665" />
+        <entry key="..\:/wemaxuserside/app/src/main/res/layout/activity_add_your_own2.xml" value="0.25416666666666665" />
+        <entry key="..\:/wemaxuserside/app/src/main/res/layout/activity_addresses.xml" value="0.25416666666666665" />
+        <entry key="..\:/wemaxuserside/app/src/main/res/layout/activity_book_appointment.xml" value="0.25416666666666665" />
         <entry key="..\:/wemaxuserside/app/src/main/res/layout/activity_business_owner.xml" value="0.25416666666666665" />
+        <entry key="..\:/wemaxuserside/app/src/main/res/layout/activity_calendar_events.xml" value="0.25416666666666665" />
+        <entry key="..\:/wemaxuserside/app/src/main/res/layout/activity_chat.xml" value="0.25416666666666665" />
         <entry key="..\:/wemaxuserside/app/src/main/res/layout/activity_complete_profile.xml" value="0.25416666666666665" />
         <entry key="..\:/wemaxuserside/app/src/main/res/layout/activity_continue_as.xml" value="0.25416666666666665" />
+        <entry key="..\:/wemaxuserside/app/src/main/res/layout/activity_create_event.xml" value="0.11302083333333333" />
         <entry key="..\:/wemaxuserside/app/src/main/res/layout/activity_hobbies_interest.xml" value="0.25416666666666665" />
         <entry key="..\:/wemaxuserside/app/src/main/res/layout/activity_invite_friends2.xml" value="0.25416666666666665" />
         <entry key="..\:/wemaxuserside/app/src/main/res/layout/activity_login.xml" value="0.25416666666666665" />
@@ -97,6 +105,7 @@
         <entry key="..\:/wemaxuserside/app/src/main/res/layout/activity_promote_business.xml" value="0.25416666666666665" />
         <entry key="..\:/wemaxuserside/app/src/main/res/layout/activity_share_location.xml" value="0.25416666666666665" />
         <entry key="..\:/wemaxuserside/app/src/main/res/layout/activity_sign_up.xml" value="0.25416666666666665" />
+        <entry key="..\:/wemaxuserside/app/src/main/res/layout/activity_touch_appointment.xml" value="0.25416666666666665" />
         <entry key="..\:/wemaxuserside/app/src/main/res/layout/activity_touch_verification.xml" value="0.25416666666666665" />
         <entry key="..\:/wemaxuserside/app/src/main/res/layout/activity_wellcome_slider.xml" value="0.25416666666666665" />
         <entry key="..\:/wemaxuserside/app/src/main/res/layout/custom_banner.xml" value="0.11302083333333333" />

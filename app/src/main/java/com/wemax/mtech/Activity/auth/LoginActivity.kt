@@ -92,8 +92,7 @@ class LoginActivity : AppCompatActivity() {
                 val location: Location? = task.result
                 if (location != null) {
                     val geocoder = Geocoder(this, Locale.getDefault())
-                    val list: List<Address> =
-                        geocoder.getFromLocation(location.latitude, location.longitude, 1)
+                    val list: List<Address> = geocoder.getFromLocation(location.latitude, location.longitude, 1)
                     binding.apply {
                         latitude = list[0].latitude.toString()
                         longitude = list[0].longitude.toString()

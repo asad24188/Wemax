@@ -26,6 +26,21 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".Activity.home.event.AddYourOwnActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.home.event.AddYourOwnActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.home.FindBusinessActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.home.FilterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.home.BookAppointmentActivity"
+            android:exported="false" />
+        <activity
             android:name=".Activity.notification.MyAppointmentsDetailsActivity"
             android:exported="false" />
         <activity
@@ -61,7 +76,6 @@
             android:name=".Activity.home.SearchActivity"
             android:exported="true"
             android:screenOrientation="portrait">
-            gr
         </activity>
         <activity
             android:name=".Activity.groups.UserProfileActivity"
