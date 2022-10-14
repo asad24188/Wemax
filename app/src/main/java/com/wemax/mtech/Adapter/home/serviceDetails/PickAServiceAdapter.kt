@@ -76,6 +76,7 @@ class PickAServiceAdapter(
     }
 
 
+
     private fun getDataDialog() {
 
         val builder = AlertDialog.Builder(context, R.style.CustomAlertDialog)
@@ -85,7 +86,27 @@ class PickAServiceAdapter(
         val btnAccept = view.findViewById<CardView>(R.id.accept)
 
         btnAccept.setOnClickListener { builder.dismiss()
-        context.startActivity(Intent(context, OTPVerifyApointmentActivity::class.java))}
+            getDataDialog2()
+        }
+
+        builder.setView(view)
+        builder.setCanceledOnTouchOutside(true)
+        builder.show()
+    }
+    private fun getDataDialog2() {
+
+        val builder = AlertDialog.Builder(context, R.style.CustomAlertDialog)
+            .create()
+        val view = layoutInflater.inflate(R.layout.popup_add_note, null)
+        val btnsave = view.findViewById<CardView>(R.id.btnsave)
+        val skiptext = view.findViewById<TextView>(R.id.tv_skip)
+
+        btnsave.setOnClickListener { builder.dismiss()
+            context.startActivity(Intent(context, OTPVerifyApointmentActivity::class.java))
+        }
+        skiptext.setOnClickListener {
+            context.startActivity(Intent(context, OTPVerifyApointmentActivity::class.java))
+        }
 
         builder.setView(view)
         builder.setCanceledOnTouchOutside(true)

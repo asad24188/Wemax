@@ -30,6 +30,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.wemax.mtech.Activity.auth.HomeActivity
 import com.wemax.mtech.Activity.home.serviceDetails.SelectDateTimeActivity
 import com.wemax.mtech.Adapter.home.serviceDetails.*
+import com.wemax.mtech.Fragment.calendar.activities.CalendarEventActivity
 import com.wemax.mtech.Model.groups.PostModel
 import com.wemax.mtech.Model.home.serviceDetails.DateTimeModel
 import com.wemax.mtech.Model.serviceDetailsModel.ServicesMoreModel
@@ -103,14 +104,7 @@ class ServiceDetialsActivity : AppCompatActivity(), OnMapReadyCallback {
         getDate()
         binding.availableAppointment.adapter=DateTimeAdapter(this,dateTimeList,layoutInflater)
 
-        binding.viewMyCalendar.setOnClickListener {
-            val fragment = "forum"
-            val intent = Intent(this,HomeActivity::class.java)
-            intent.putExtra("fragment", fragment)
-            startActivity(intent)
-            finishAffinity()
-            overridePendingTransition(0,0)
-        }
+
         binding.btn.setOnClickListener {
             startActivity(Intent(this, SelectDateTimeActivity::class.java))
 
@@ -307,6 +301,18 @@ class ServiceDetialsActivity : AppCompatActivity(), OnMapReadyCallback {
 
     private fun onClicks() {
         binding.back.setOnClickListener { finish() }
+
+        binding.viewMyCalendar.setOnClickListener {
+            val fragment = "forum"
+            val intent = Intent(this, HomeActivity::class.java)
+            intent.putExtra("fragment", fragment)
+            startActivity(intent)
+            finishAffinity()
+        }
+
+
+
+
 
     }
 

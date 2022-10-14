@@ -28,8 +28,8 @@
                 <ImageView
                     android:id="@+id/wemaxLogo"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/_55sdp"
-                    android:layout_marginTop="@dimen/_40sdp"
+                    android:layout_height="@dimen/_52sdp"
+                    android:layout_marginTop="@dimen/_27sdp"
                     android:src="@drawable/ic_splashlogo" />
 
                 <RelativeLayout
@@ -43,7 +43,7 @@
                     <androidx.viewpager.widget.ViewPager
                         android:id="@+id/pager"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_alignParentTop="true" />
 
 
@@ -68,7 +68,7 @@
                     android:id="@+id/btnlayout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_24sdp">
+                    android:layout_marginTop="@dimen/_18sdp">
 
                     <androidx.cardview.widget.CardView
                         android:id="@+id/btnext"

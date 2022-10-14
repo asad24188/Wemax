@@ -303,5 +303,6 @@
     <string name="select_when_you_want_to_recieve">Select When You Want To Recieve Notifications About Switch Requests</string>
     <string name="sign_up_text"><u>Sign Up</u></string>
     <string name="checkinternet">Check your internet connection</string>
+    <string name="skip_text"><u>Skip</u></string>
 
 </resources>

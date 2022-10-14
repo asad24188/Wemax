@@ -240,9 +240,16 @@
             android:name=".Activity.home.event.EventDetailsActivity"
             android:exported="true"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.Wemax.NoActionBarAndStatusBar" />
+            android:theme="@style/Theme.Wemax.NoActionBarAndStatusBar">
+
+
+        </activity>
         <activity
             android:name=".Activity.home.event.CreateEventActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.home.event.NewEventChatActivity"
             android:exported="true"
             android:screenOrientation="portrait" />
         <!--
@@ -258,7 +265,8 @@
             android:name=".ServiceDetialsActivity"
             android:exported="true"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.Wemax.NoActionBarAndStatusBar" />
+            android:theme="@style/Theme.Wemax.NoActionBarAndStatusBar" >
+        </activity>
         <activity
             android:name=".Activity.AddressesActivity"
             android:exported="true"
@@ -286,17 +294,17 @@
             android:exported="true"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
 
         </activity>
         <activity
             android:name="com.wemax.mtech.SplashActivity"
             android:exported="true"
             android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

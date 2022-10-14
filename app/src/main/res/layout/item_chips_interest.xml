@@ -16,6 +16,6 @@
         android:paddingVertical="@dimen/_9sdp"
         android:text="@string/walking"
         android:textAlignment="center"
-        android:textColor="@color/see_all_text"
+        android:textColor="@color/blue"
         android:textSize="@dimen/_10ssp" />
 </RelativeLayout>

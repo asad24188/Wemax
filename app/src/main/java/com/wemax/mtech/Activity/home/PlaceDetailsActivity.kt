@@ -1,6 +1,7 @@
 package com.wemax.mtech.Activity.home
 
 import android.Manifest
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.graphics.Canvas
@@ -24,14 +25,17 @@ import com.google.android.gms.maps.*
 import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.remindrobort.app.utils.Utilities
 import com.viewpagerindicator.CirclePageIndicator
+import com.wemax.mtech.Activity.auth.HomeActivity
 import com.wemax.mtech.Adapter.ChipsAdapter
 import com.wemax.mtech.Adapter.NewReminderAdapter
 import com.wemax.mtech.Adapter.VideoPagerSliderAdapter
 import com.wemax.mtech.Adapter.home.event.AcceptedAdapter
 import com.wemax.mtech.Adapter.home.serviceDetails.FindSomeThingAdapter
 import com.wemax.mtech.Adapter.home.serviceDetails.ServiceReviewsAdapter
+import com.wemax.mtech.Fragment.calendar.activities.CalendarEventActivity
 import com.wemax.mtech.Model.AcceptedModel
 import com.wemax.mtech.Model.ChipsTagsModel
 import com.wemax.mtech.Model.VideosPlaceDetailsModel
@@ -100,6 +104,15 @@ class PlaceDetailsActivity : AppCompatActivity(), OnMapReadyCallback {
     private fun onClicks() {
         binding.back.setOnClickListener { finish() }
 
+
+        binding.viewMyCalendar.setOnClickListener {
+//            startActivity(Intent(this, CalendarEventActivity::class.java))
+            val fragment = "forum"
+            val intent = Intent(this, HomeActivity::class.java)
+            intent.putExtra("fragment", fragment)
+            startActivity(intent)
+            finishAffinity()
+        }
 //        testVideo()
         videoCode()
 

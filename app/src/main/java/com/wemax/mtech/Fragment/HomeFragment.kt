@@ -31,6 +31,7 @@ import java.util.*
 class HomeFragment : Fragment() {
     lateinit var bottomNavigation: BottomNavigationView
     lateinit var newArrayList: ArrayList<PostModel>
+    lateinit var newArrayList2: ArrayList<HotEventsPostModel>
     lateinit var newArrayListHotEvents: ArrayList<HotEventsPostModel>
     lateinit var newArrayListSearch: ArrayList<SearchModel>
     lateinit var Images: Array<Int>
@@ -244,10 +245,10 @@ class HomeFragment : Fragment() {
         binding.rcvEventsNextToMe.layoutManager =
             LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
         binding.rcvEventsNextToMe.setHasFixedSize(true)
-        newArrayList = arrayListOf()
-        getUserData()
+        newArrayList2 = arrayListOf()
+        getUserData2()
         binding.rcvEventsNextToMe.adapter =
-            HomeFragmentServicesAdapter(requireContext(), newArrayList)
+            HotEventsAdapter(requireContext(), newArrayList2)
 
     }
 
@@ -320,25 +321,57 @@ class HomeFragment : Fragment() {
         newArrayList.add(
             PostModel(
                 R.drawable.provider1, getString(R.string.post_title),
-                getString(R.string.rating_text)
+                getString(R.string.rating_text),
             )
         )
         newArrayList.add(
             PostModel(
                 R.drawable.provider2, "Paradise Beauty Salon",
-                getString(R.string.rating_text)
+                getString(R.string.rating_text),
             )
         )
         newArrayList.add(
             PostModel(
                 R.drawable.provider1, getString(R.string.post_title),
-                getString(R.string.rating_text)
+                getString(R.string.rating_text),
             )
         )
         newArrayList.add(
             PostModel(
                 R.drawable.provider1, getString(R.string.post_title),
-                getString(R.string.rating_text)
+                getString(R.string.rating_text),
+
+            )
+        )
+    }
+    private fun getUserData2() {
+        newArrayList2 = arrayListOf()
+        newArrayList2.add(
+            HotEventsPostModel(
+                R.drawable.eventparty_img, getString(R.string.post_title),
+                getString(R.string.rating_text),
+                "2km away"
+            )
+        )
+        newArrayList2.add(
+            HotEventsPostModel(
+                R.drawable.eventparty_img, "Paradise Beauty Salon",
+                getString(R.string.rating_text),
+                "2km away"
+            )
+        )
+        newArrayList2.add(
+            HotEventsPostModel(
+                R.drawable.eventparty_img, getString(R.string.post_title),
+                getString(R.string.rating_text),
+                "2km away"
+            )
+        )
+        newArrayList2.add(
+            HotEventsPostModel(
+                R.drawable.eventparty_img, getString(R.string.post_title),
+                getString(R.string.rating_text),
+                "2km away"
             )
         )
     }
@@ -352,7 +385,7 @@ class HomeFragment : Fragment() {
         )
         newArrayList.add(
             PostModel(
-                R.drawable.ic_park_view,"Clay County Little Rain Lake Park",
+                R.drawable.playgroundimg,"Clay County Little Rain Lake Park",
                 getString(R.string.rating_text)
             )
         )
@@ -374,28 +407,28 @@ class HomeFragment : Fragment() {
         newArrayListHotEvents = arrayListOf()
         newArrayListHotEvents.add(
             HotEventsPostModel(
-                R.drawable.pic_main, "New Year Party",
+                R.drawable.eventparty_img, "New Year Party",
                 getString(R.string.rating_text),
                 getString(R.string._2_km_away)
             )
         )
         newArrayListHotEvents.add(
             HotEventsPostModel(
-                R.drawable.pic_main, "New Year Party",
+                R.drawable.eventparty_img, "New Year Party",
                 getString(R.string.rating_text),
                 getString(R.string._2_km_away)
             )
         )
         newArrayListHotEvents.add(
             HotEventsPostModel(
-                R.drawable.pic_main, getString(R.string.post_title),
+                R.drawable.eventparty_img, getString(R.string.post_title),
                 getString(R.string.rating_text),
                 getString(R.string._2_km_away)
             )
         )
         newArrayListHotEvents.add(
             HotEventsPostModel(
-                R.drawable.provider1, getString(R.string.post_title),
+                R.drawable.eventparty_img, getString(R.string.post_title),
                 getString(R.string.rating_text),
                 getString(R.string._2_km_away)
             )

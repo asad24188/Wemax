@@ -9,6 +9,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
+import com.wemax.mtech.Activity.home.PlaceDetailsActivity
 import com.wemax.mtech.Model.groups.PostModel
 import com.wemax.mtech.R
 import com.wemax.mtech.ServiceDetialsActivity
@@ -36,7 +37,7 @@ class HomeFragmentPlacesAdapter(val context: Context, val booking: List<PostMode
         holder.providerName.text = obj.postTitle
         holder.providerRating.text = obj.postRating
         holder.parentProductDetail.setOnClickListener {
-            context.startActivity(Intent(context, ServiceDetialsActivity::class.java))
+            context.startActivity(Intent(context, PlaceDetailsActivity::class.java))
 
         }
     }

@@ -17,6 +17,7 @@ import com.beloo.widget.chipslayoutmanager.ChipsLayoutManager
 import com.github.dhaval2404.imagepicker.ImagePicker
 import com.wemax.mtech.Model.home.event.LabelsModelClass
 import com.remindrobort.app.utils.Utilities
+import com.wemax.mtech.Activity.chat.ChatActivity
 import com.wemax.mtech.Adapter.ChipsAdapter
 import com.wemax.mtech.Adapter.NewReminderAdapter
 import com.wemax.mtech.Adapter.groups.CustomSpinnerAdapter
@@ -94,7 +95,7 @@ class CreateEventActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListe
         }
 
         binding.btncreate.setOnClickListener {
-            startActivity(Intent(this, EventDetailsActivity::class.java))
+            startActivity(Intent(this, NewEventChatActivity::class.java))
         }
 
         binding.addCustomeLable.setOnClickListener {
@@ -150,6 +151,7 @@ class CreateEventActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListe
 
     private fun getSpinnersValue() {
         val list1_category = arrayOf(
+            "Select Event Category",
             "Category 1",
             "Category 2",
             "Category 3",
