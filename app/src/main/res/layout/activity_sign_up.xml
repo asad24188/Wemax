@@ -54,7 +54,6 @@
                 android:id="@+id/tv_please"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/tv_continue"
                 android:layout_marginStart="@dimen/_28sdp"
                 android:layout_marginTop="@dimen/_3sdp"
                 android:fontFamily="@font/poppins_light"
