@@ -17,6 +17,7 @@ import com.wemax.mtech.Activity.auth.HomeActivity
 import com.wemax.mtech.Activity.home.BookAppointmentActivity
 import com.wemax.mtech.Activity.home.SearchActivity
 import com.wemax.mtech.Activity.home.event.CreateEventActivity
+import com.wemax.mtech.Activity.home.event.FIndActivity
 import com.wemax.mtech.Adapter.InviteFriendsAdapter
 import com.wemax.mtech.Adapter.groups.CustomSpinnerAdapter
 import com.wemax.mtech.Adapter.home.*
@@ -100,7 +101,9 @@ class HomeFragment : Fragment() {
                 .addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION))
         }
         binding.findActivity.setOnClickListener {
-            bottomNavigation.selectedItemId=R.id.searchFragment
+//            bottomNavigation.selectedItemId=R.id.searchFragment
+            startActivity(Intent(context, FIndActivity::class.java)
+                .addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION))
         }
         searchAdapter()
         recommendedForYou()

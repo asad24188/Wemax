@@ -26,6 +26,12 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".Activity.calendarReminder.CalenderAccessActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.home.event.FIndActivity"
+            android:exported="false" />
+        <activity
             android:name=".Activity.home.event.AddYourOwnActivity2"
             android:exported="false" />
         <activity
@@ -52,8 +58,7 @@
             android:theme="@style/Theme.Wemax.NoActionBarAndStatusBar" />
         <activity
             android:name=".Activity.auth.TouchVerificationActivity"
-            android:exported="false"
-             />
+            android:exported="false" />
         <activity
             android:name=".Activity.chat.StatusActivity"
             android:exported="false" />
@@ -75,8 +80,7 @@
         <activity
             android:name=".Activity.home.SearchActivity"
             android:exported="true"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Activity.groups.UserProfileActivity"
             android:exported="true"
@@ -84,18 +88,15 @@
         <activity
             android:name=".Activity.auth.ShareLocationActivity"
             android:exported="true"
-            android:screenOrientation="portrait"
-             />
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Activity.auth.HobbiesInterestActivity"
             android:exported="true"
-            android:screenOrientation="portrait"
-             />
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Activity.auth.BusinessOwnerActivity"
             android:exported="false"
-            android:screenOrientation="portrait"
-            />
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Activity.auth.ForgetPasswordActivity"
             android:exported="false"
@@ -191,8 +192,7 @@
         <activity
             android:name=".Activity.CompleteProfileActivity"
             android:exported="true"
-            android:screenOrientation="portrait"
-            />
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Activity.auth.SignUpActivity"
             android:exported="true"
@@ -240,10 +240,7 @@
             android:name=".Activity.home.event.EventDetailsActivity"
             android:exported="true"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.Wemax.NoActionBarAndStatusBar">
-
-
-        </activity>
+            android:theme="@style/Theme.Wemax.NoActionBarAndStatusBar" />
         <activity
             android:name=".Activity.home.event.CreateEventActivity"
             android:exported="true"
@@ -265,8 +262,7 @@
             android:name=".ServiceDetialsActivity"
             android:exported="true"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.Wemax.NoActionBarAndStatusBar" >
-        </activity>
+            android:theme="@style/Theme.Wemax.NoActionBarAndStatusBar"></activity>
         <activity
             android:name=".Activity.AddressesActivity"
             android:exported="true"
@@ -299,13 +295,11 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity
             android:name="com.wemax.mtech.SplashActivity"
             android:exported="true"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

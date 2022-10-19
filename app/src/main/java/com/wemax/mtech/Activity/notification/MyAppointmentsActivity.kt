@@ -38,7 +38,7 @@ class MyAppointmentsActivity : AppCompatActivity() {
         binding.uprcv.setHasFixedSize(true)
         newArrayList2 = arrayListOf<DataModelUpcomingsAppoints>()
         getData2()
-        binding.uprcv.adapter = AdapterUpcomingsApoints(this, newArrayList2)
+        binding.uprcv.adapter = AdapterUpcomingsApoints(this, newArrayList2,layoutInflater)
 
 
         binding.recentapointment.setOnClickListener {

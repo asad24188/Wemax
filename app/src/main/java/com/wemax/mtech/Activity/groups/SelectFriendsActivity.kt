@@ -51,7 +51,7 @@ class SelectFriendsActivity : AppCompatActivity() {
 
         binding.myFriendsRecycler.layoutManager = LinearLayoutManager(contextActivity)
         initRecyclerView()
-        binding.myFriendsRecycler.adapter = SelectFriendsAdapter(contextActivity, listMyFriends)
+        binding.myFriendsRecycler.adapter = SelectFriendsAdapter(contextActivity, listMyFriends,layoutInflater)
 
         binding.addedFriendsRcv.layoutManager =
             LinearLayoutManager(contextActivity, LinearLayoutManager.HORIZONTAL, false)

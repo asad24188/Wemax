@@ -9,7 +9,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/_50sdp"
         android:layout_alignParentTop="true"
         app:cardElevation="@dimen/_10sdp">
 

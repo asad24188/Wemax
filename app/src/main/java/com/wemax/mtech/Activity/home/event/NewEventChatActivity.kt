@@ -28,6 +28,9 @@ class NewEventChatActivity : AppCompatActivity() {
         binding.backpress.setOnClickListener {
             finish()
         }
+        binding.btn.setOnClickListener {
+            startActivity(Intent(this, EventDetailsActivity::class.java))
+        }
 
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR)
         binding.addedFriendsRcv.layoutManager = LinearLayoutManager(contextActivity, LinearLayoutManager.HORIZONTAL, false)
@@ -37,7 +40,7 @@ class NewEventChatActivity : AppCompatActivity() {
 
         binding.myFriendsRecycler.layoutManager = LinearLayoutManager(contextActivity)
         initRecyclerView()
-        binding.myFriendsRecycler.adapter = SelectFriendsAdapter(contextActivity, listMyFriends)
+        binding.myFriendsRecycler.adapter = SelectFriendsAdapter(contextActivity, listMyFriends,layoutInflater)
     }
     private fun initRecyclerViewAddedFriends() {
 

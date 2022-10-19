@@ -39,7 +39,7 @@ class NewGroupChatActivity : AppCompatActivity() {
 
         binding.myFriendsRecycler.layoutManager = LinearLayoutManager(contextActivity)
         initRecyclerView()
-        binding.myFriendsRecycler.adapter = SelectFriendsAdapter(contextActivity, listMyFriends)
+        binding.myFriendsRecycler.adapter = SelectFriendsAdapter(contextActivity, listMyFriends,layoutInflater)
     }
     private fun initRecyclerViewAddedFriends() {
 
