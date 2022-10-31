@@ -99,6 +99,7 @@
         <entry key="..\:/Users/pc/Documents/WemaxUserSide/wemaxuserside/app/src/main/res/layout/activity_filter.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/pc/Documents/WemaxUserSide/wemaxuserside/app/src/main/res/layout/activity_find.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/pc/Documents/WemaxUserSide/wemaxuserside/app/src/main/res/layout/activity_group_chat.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/pc/Documents/WemaxUserSide/wemaxuserside/app/src/main/res/layout/activity_group_info.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/pc/Documents/WemaxUserSide/wemaxuserside/app/src/main/res/layout/activity_login.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/pc/Documents/WemaxUserSide/wemaxuserside/app/src/main/res/layout/activity_my_appointments.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/pc/Documents/WemaxUserSide/wemaxuserside/app/src/main/res/layout/activity_my_appointments_details.xml" value="0.17095508068033144" />
@@ -107,9 +108,12 @@
         <entry key="..\:/Users/pc/Documents/WemaxUserSide/wemaxuserside/app/src/main/res/layout/activity_new_group_chat.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/pc/Documents/WemaxUserSide/wemaxuserside/app/src/main/res/layout/activity_otpverification.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/pc/Documents/WemaxUserSide/wemaxuserside/app/src/main/res/layout/activity_otpverify_apointment.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/pc/Documents/WemaxUserSide/wemaxuserside/app/src/main/res/layout/activity_photo_gallery.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/pc/Documents/WemaxUserSide/wemaxuserside/app/src/main/res/layout/activity_picka_service.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/pc/Documents/WemaxUserSide/wemaxuserside/app/src/main/res/layout/activity_place_details.xml" value="0.16085350841198195" />
+        <entry key="..\:/Users/pc/Documents/WemaxUserSide/wemaxuserside/app/src/main/res/layout/activity_post_details.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/pc/Documents/WemaxUserSide/wemaxuserside/app/src/main/res/layout/activity_profile.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/pc/Documents/WemaxUserSide/wemaxuserside/app/src/main/res/layout/activity_promote_business.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/pc/Documents/WemaxUserSide/wemaxuserside/app/src/main/res/layout/activity_search.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/pc/Documents/WemaxUserSide/wemaxuserside/app/src/main/res/layout/activity_service_detials.xml" value="0.18022988505747126" />
         <entry key="..\:/Users/pc/Documents/WemaxUserSide/wemaxuserside/app/src/main/res/layout/activity_sign_up_business.xml" value="0.20416666666666666" />
@@ -125,8 +129,10 @@
         <entry key="..\:/Users/pc/Documents/WemaxUserSide/wemaxuserside/app/src/main/res/layout/item_home_fragment_services.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/pc/Documents/WemaxUserSide/wemaxuserside/app/src/main/res/layout/item_home_fragment_services2.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/pc/Documents/WemaxUserSide/wemaxuserside/app/src/main/res/layout/item_layout_hot_events.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/pc/Documents/WemaxUserSide/wemaxuserside/app/src/main/res/layout/item_photo_gallery.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/pc/Documents/WemaxUserSide/wemaxuserside/app/src/main/res/layout/item_search_layout.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/pc/Documents/WemaxUserSide/wemaxuserside/app/src/main/res/layout/item_select_friend.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/pc/Documents/WemaxUserSide/wemaxuserside/app/src/main/res/layout/item_service_review.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/pc/Documents/WemaxUserSide/wemaxuserside/app/src/main/res/layout/item_upcoming_appoints.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/pc/Documents/WemaxUserSide/wemaxuserside/app/src/main/res/layout/popup_add_custom_label.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/pc/Documents/WemaxUserSide/wemaxuserside/app/src/main/res/layout/popup_add_note.xml" value="0.20416666666666666" />

@@ -93,7 +93,7 @@ dependencies {
     //ccp
     implementation 'com.hbb20:ccp:2.6.0'
 
-    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.+'
+//    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.+'
 
     implementation 'com.github.dhaval2404:imagepicker:2.1'
     implementation 'com.github.rtoshiro.fullscreenvideoview:fullscreenvideoview:1.1.0'
