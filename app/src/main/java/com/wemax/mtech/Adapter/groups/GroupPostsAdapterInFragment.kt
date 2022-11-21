@@ -12,7 +12,7 @@ import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.imageview.ShapeableImageView
-import com.wemax.mtech.Activity.groups.UserProfileActivity
+import com.wemax.mtech.activity.groups.UserProfileActivity
 import com.wemax.mtech.Model.groups.SinglePostModel
 import com.wemax.mtech.R
 import com.wemax.mtech.ServiceDetialsActivity

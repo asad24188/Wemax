@@ -2,25 +2,13 @@ package com.wemax.mtech
 
 import android.Manifest
 import android.content.Intent
-import android.content.pm.PackageManager
-import android.location.Address
-import android.location.Geocoder
-import android.location.Location
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import android.provider.Settings
-import android.util.Log
 import android.view.View
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
 import com.permissionx.guolindev.PermissionX
-import com.wemax.mtech.Activity.auth.WellcomeSliderActivity
-import java.util.*
-import java.util.concurrent.Executors
-import java.util.concurrent.ScheduledExecutorService
-import java.util.concurrent.TimeUnit
+import com.wemax.mtech.activity.auth.WellcomeSliderActivity
 
 class SplashActivity : AppCompatActivity() {
 

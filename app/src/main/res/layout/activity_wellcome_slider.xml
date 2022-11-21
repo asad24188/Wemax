@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".Activity.auth.WellcomeSliderActivity">
+    tools:context=".activity.auth.WellcomeSliderActivity">
 
     <ScrollView
         android:layout_width="match_parent"

@@ -12,7 +12,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.imageview.ShapeableImageView
-import com.wemax.mtech.Activity.OTPVerifyApointmentActivity
+import com.wemax.mtech.activity.OTPVerifyApointmentActivity
 import com.wemax.mtech.Model.serviceDetailsModel.ServicesMoreModel
 import com.wemax.mtech.R
 

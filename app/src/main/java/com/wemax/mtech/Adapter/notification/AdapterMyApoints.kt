@@ -6,16 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.cardview.widget.CardView
-import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
-import com.wemax.mtech.Activity.home.event.CreateEventActivity
-import com.wemax.mtech.Activity.notification.MyAppointmentsDetailsActivity
+import com.wemax.mtech.activity.notification.MyAppointmentsDetailsActivity
 import com.wemax.mtech.Model.notification.DataModelMyAppoints
 import com.wemax.mtech.R
-import com.wemax.mtech.ServiceDetialsActivity
 
 class AdapterMyApoints(val context : Context, val list: ArrayList<DataModelMyAppoints>) :
     RecyclerView.Adapter<AdapterMyApoints.ViewHolder>() {

@@ -7,8 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.wemax.mtech.Activity.home.PlaceDetailsActivity
-import com.wemax.mtech.Activity.notification.ProfileActivity
+import com.wemax.mtech.activity.notification.ProfileActivity
 import com.wemax.mtech.Adapter.notification.NotificationAdapter
 import com.wemax.mtech.Model.notification.ModelNotification
 import com.wemax.mtech.R

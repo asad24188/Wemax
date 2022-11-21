@@ -9,7 +9,7 @@ import android.widget.ImageView
 import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.wemax.mtech.Activity.ReminderDetailsActivity
+import com.wemax.mtech.activity.ReminderDetailsActivity
 import com.wemax.mtech.Model.notification.ModelNotification
 import com.wemax.mtech.R
 

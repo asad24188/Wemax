@@ -9,11 +9,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
-import com.google.android.material.imageview.ShapeableImageView
-import com.wemax.mtech.Activity.groups.GroupPostsActivity
-import com.wemax.mtech.Model.groups.GroupMembersModel
+import com.wemax.mtech.activity.groups.GroupPostsActivity
 import com.wemax.mtech.Model.groups.GroupsModelInFragment
-import com.wemax.mtech.Model.groups.MyGroupsModel
 import com.wemax.mtech.R
 
 class GroupsAdapterInFragment(val context: Context, val list: ArrayList<GroupsModelInFragment>) :

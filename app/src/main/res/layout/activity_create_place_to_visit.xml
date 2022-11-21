@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Activity.home.CreatePlaceToVisitActivity">
+    tools:context=".activity.home.CreatePlaceToVisitActivity">
 
 
     <androidx.cardview.widget.CardView

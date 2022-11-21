@@ -1,7 +1,6 @@
 package com.wemax.mtech.Adapter.home.serviceDetails
 
 import android.app.DatePickerDialog
-import android.app.Dialog
 import android.app.TimePickerDialog
 import android.content.Context
 import android.content.Intent
@@ -12,15 +11,9 @@ import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
-import com.google.android.material.imageview.ShapeableImageView
-import com.wemax.mtech.Activity.OTPVerifyApointmentActivity
-import com.wemax.mtech.Activity.auth.TouchAppointmentActivity
-import com.wemax.mtech.Activity.home.serviceDetails.PhotoGalleryActivity
-import com.wemax.mtech.Activity.home.serviceDetails.SelectDateTimeActivity
+import com.wemax.mtech.activity.auth.TouchAppointmentActivity
 import com.wemax.mtech.Model.home.serviceDetails.DateTimeModel
-import com.wemax.mtech.Model.serviceDetailsModel.ServicesMoreModel
 import com.wemax.mtech.R
-import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
 

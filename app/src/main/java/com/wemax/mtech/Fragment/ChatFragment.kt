@@ -7,15 +7,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.wemax.mtech.Activity.chat.StatusActivity
-import com.wemax.mtech.Activity.groups.CreateGroupActivity
-import com.wemax.mtech.Activity.groups.SelectFriendsActivity
+import com.wemax.mtech.activity.chat.StatusActivity
+import com.wemax.mtech.activity.groups.SelectFriendsActivity
 import com.wemax.mtech.Adapter.ChatAdapterr
-import com.wemax.mtech.Adapter.groups.PostCommentsAdapter
 import com.wemax.mtech.Model.groups.PostCommentsModel
 import com.wemax.mtech.R
 import com.wemax.mtech.databinding.FragmentChatBinding
-import com.wemax.mtech.databinding.FragmentNotificationBinding
 
 class ChatFragment : Fragment() {
     private var _binding: FragmentChatBinding? = null

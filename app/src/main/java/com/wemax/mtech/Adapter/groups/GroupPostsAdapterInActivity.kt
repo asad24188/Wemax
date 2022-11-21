@@ -12,8 +12,8 @@ import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.imageview.ShapeableImageView
-import com.wemax.mtech.Activity.groups.PostDetailsActivity
-import com.wemax.mtech.Activity.groups.MyProfileActivity
+import com.wemax.mtech.activity.groups.PostDetailsActivity
+import com.wemax.mtech.activity.groups.MyProfileActivity
 import com.wemax.mtech.Model.groups.SinglePostModel
 import com.wemax.mtech.R
 

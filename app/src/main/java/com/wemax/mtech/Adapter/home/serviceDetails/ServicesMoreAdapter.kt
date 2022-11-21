@@ -9,8 +9,8 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.imageview.ShapeableImageView
-import com.wemax.mtech.Activity.home.serviceDetails.PhotoGalleryActivity
-import com.wemax.mtech.Activity.home.serviceDetails.SelectDateTimeActivity
+import com.wemax.mtech.activity.home.serviceDetails.PhotoGalleryActivity
+import com.wemax.mtech.activity.home.serviceDetails.SelectDateTimeActivity
 import com.wemax.mtech.Model.serviceDetailsModel.ServicesMoreModel
 import com.wemax.mtech.R
 

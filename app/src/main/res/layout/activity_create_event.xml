@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Activity.home.event.CreateEventActivity">
+    tools:context=".activity.home.event.CreateEventActivity">
 
 
     <androidx.cardview.widget.CardView

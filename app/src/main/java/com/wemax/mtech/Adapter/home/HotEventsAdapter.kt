@@ -9,7 +9,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
-import com.wemax.mtech.Activity.home.event.EventDetailsActivity
+import com.wemax.mtech.activity.home.event.EventDetailsActivity
 import com.wemax.mtech.Model.home.HotEventsPostModel
 import com.wemax.mtech.R
 

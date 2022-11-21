@@ -1,19 +1,14 @@
 package com.wemax.mtech.Adapter.groups
 
 import android.content.Context
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.imageview.ShapeableImageView
-import com.wemax.mtech.Activity.groups.GroupPostsActivity
 import com.wemax.mtech.Model.groups.AddedFriendsModel
-import com.wemax.mtech.Model.groups.MyGroupsModel
-import com.wemax.mtech.Model.groups.SelectFriendsModel
 import com.wemax.mtech.R
 
 class AddedFriendsAdapter(val context: Context, val list: ArrayList<AddedFriendsModel>) :

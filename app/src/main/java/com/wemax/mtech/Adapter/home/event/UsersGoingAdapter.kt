@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.imageview.ShapeableImageView
-import com.wemax.mtech.Activity.home.event.EventMembersActivity
+import com.wemax.mtech.activity.home.event.EventMembersActivity
 import com.wemax.mtech.Model.home.event.UsersGoingModelClass
 import com.wemax.mtech.R
 

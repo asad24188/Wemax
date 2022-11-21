@@ -14,7 +14,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.annotation.DrawableRes
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat.getSystemService
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -24,12 +23,9 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import com.remindrobort.app.utils.Utilities
-import com.wemax.mtech.Activity.auth.HomeActivity
-import com.wemax.mtech.Adapter.ChipsAdapter
 import com.wemax.mtech.Adapter.RecentSearchAdapter
 import com.wemax.mtech.Model.ChipsTagsModel
 import com.wemax.mtech.R
-import com.wemax.mtech.databinding.FragmentHomeBinding
 import com.wemax.mtech.databinding.FragmentSearchBinding
 
 class SearchFragment : Fragment() {

@@ -5,15 +5,10 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.LinearLayout
-import android.widget.RelativeLayout
 import android.widget.TextView
-import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
-import com.wemax.mtech.Activity.home.event.AddYourOwnActivity2
+import com.wemax.mtech.activity.home.event.AddYourOwnActivity2
 import com.wemax.mtech.Model.home.event.AddYourOwnModel
-import com.wemax.mtech.Model.home.event.BringingModelClass
-import com.wemax.mtech.Model.home.event.LabelsModelClass
 import com.wemax.mtech.R
 import java.util.ArrayList
 

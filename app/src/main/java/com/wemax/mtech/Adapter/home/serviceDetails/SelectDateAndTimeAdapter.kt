@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.wemax.mtech.Activity.home.serviceDetails.PickaServiceActivity
+import com.wemax.mtech.activity.home.serviceDetails.PickaServiceActivity
 import com.wemax.mtech.Model.calendarReminder.CalendarReminderModel
 import com.wemax.mtech.R
 

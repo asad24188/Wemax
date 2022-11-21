@@ -42,8 +42,6 @@ class ChipsAdapter(val context: Context, val list: ArrayList<ChipsTagsModel>) :
             holder.interest.setBackgroundResource(
                 if (holder.interest.background?.constantState == drawableAConstantState) {
                     R.drawable.selected_interest_chips_bg
-
-
                 } else {
                     R.drawable.interest_chips_bg
                 }

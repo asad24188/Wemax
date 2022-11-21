@@ -9,8 +9,7 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.imageview.ShapeableImageView
-import com.wemax.mtech.Activity.groups.GroupPostsActivity
-import com.wemax.mtech.Model.groups.GroupMembersModel
+import com.wemax.mtech.activity.groups.GroupPostsActivity
 import com.wemax.mtech.Model.groups.MyGroupsModel
 import com.wemax.mtech.R
 

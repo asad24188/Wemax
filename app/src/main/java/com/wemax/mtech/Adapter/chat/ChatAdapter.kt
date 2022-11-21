@@ -9,8 +9,7 @@ import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.imageview.ShapeableImageView
-import com.wemax.mtech.Activity.chat.ChatActivity
-import com.wemax.mtech.Adapter.groups.PostCommentsAdapter
+import com.wemax.mtech.activity.chat.ChatActivity
 import com.wemax.mtech.Model.groups.PostCommentsModel
 import com.wemax.mtech.R
 

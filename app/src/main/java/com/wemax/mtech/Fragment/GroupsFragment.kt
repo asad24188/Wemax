@@ -8,9 +8,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.remindrobort.app.utils.Utilities
-import com.wemax.mtech.Activity.groups.FindEventsActivity
-import com.wemax.mtech.Activity.groups.CreateGroupActivity
-import com.wemax.mtech.Activity.groups.MyGroupsActivity
+import com.wemax.mtech.activity.groups.FindEventsActivity
+import com.wemax.mtech.activity.groups.CreateGroupActivity
+import com.wemax.mtech.activity.groups.MyGroupsActivity
 import com.wemax.mtech.Adapter.groups.GroupPostsAdapterInFragment
 import com.wemax.mtech.Adapter.groups.GroupsAdapterInFragment
 import com.wemax.mtech.Model.groups.GroupsModelInFragment

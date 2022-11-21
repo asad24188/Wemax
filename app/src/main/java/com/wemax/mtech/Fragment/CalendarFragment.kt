@@ -11,7 +11,7 @@ import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.LinearSnapHelper
-import com.wemax.mtech.Activity.NewEditReminderActivity
+import com.wemax.mtech.activity.NewEditReminderActivity
 import com.wemax.mtech.Adapter.calendarReminder.calendar.CalendarAdapter
 import com.wemax.mtech.Adapter.calendarReminder.calendar.CalendarRemindersAdapter
 import com.wemax.mtech.Model.calendarReminder.CalendarReminderModel
