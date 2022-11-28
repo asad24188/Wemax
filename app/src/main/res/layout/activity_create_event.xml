@@ -11,7 +11,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/_50sdp"
         android:layout_alignParentTop="true"
         app:cardElevation="@dimen/_10sdp">
 
@@ -364,8 +364,8 @@
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="@dimen/_16sdp"
                     android:layout_toRightOf="@+id/imageDate"
-                    android:fontFamily="@font/poppins_light"
-                    android:text="@string/dd_mm_yyyy_23_59"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Select Date And Time"
                     android:textColor="@color/black"
                     android:textColorHint="@color/hint_color"
                     android:textSize="@dimen/_10ssp" />
@@ -611,7 +611,7 @@
                             android:layout_centerInParent="true"
                             android:layout_gravity="center"
                             android:fontFamily="@font/poppins_semi_bold"
-                            android:text="@string/create_event"
+                            android:text="Continue"
                             android:textColor="@color/white"
                             android:textSize="@dimen/_13ssp" />
 

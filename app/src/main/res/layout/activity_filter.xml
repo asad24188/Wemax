@@ -168,19 +168,19 @@
             <com.google.android.material.slider.RangeSlider
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_20sdp"
-                android:stepSize="5000"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:stepSize="5"
                 android:valueFrom="0"
                 android:layout_marginHorizontal="@dimen/_13sdp"
-                android:valueTo="100000"
+                android:valueTo="10"
                 app:haloRadius="0dp"
                 app:labelBehavior="visible"
                 app:thumbColor="@color/blue"
-                app:thumbRadius="@dimen/_12ssp"
+                app:thumbRadius="@dimen/_5ssp"
                 app:tickVisible="true"
                 app:trackColorActive="@color/blue"
                 app:trackColorInactive="@color/grey_text"
-                app:trackHeight="@dimen/_4sdp" />
+                app:trackHeight="@dimen/_2sdp" />
 
             <TextView
                 android:layout_width="wrap_content"

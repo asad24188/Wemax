@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:layout_marginTop="@dimen/_10sdp"
     android:layout_marginBottom="@dimen/_5sdp"
-    android:layout_marginHorizontal="@dimen/_8sdp"
+    android:layout_marginHorizontal="@dimen/_10sdp"
     app:cardCornerRadius="@dimen/_5sdp"
     app:cardElevation="@dimen/_2sdp"
     android:elevation="@dimen/_2sdp">
@@ -24,7 +24,7 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="@dimen/_75sdp"
                 android:layout_height="@dimen/_64sdp"
-                app:cardCornerRadius="@dimen/_8sdp"
+                app:cardCornerRadius="@dimen/_5sdp"
                 android:elevation="0dp"
                 android:layout_marginStart="@dimen/_7sdp"
                 android:layout_gravity="center_vertical"
@@ -159,7 +159,7 @@
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/upapointment"
-                android:layout_width="130dp"
+                android:layout_width="140dp"
                 android:layout_height="@dimen/_32sdp"
                 android:orientation="vertical"
                 android:gravity="center"

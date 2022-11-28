@@ -70,7 +70,7 @@
             app:colorClickableText="@color/black"
             app:trimCollapsedText="read less"
             app:trimExpandedText="read more"
-            app:trimLength="90"
+            app:trimLength="80"
             app:trimMode="trimModeLength" />
 
         <!--        <TextView

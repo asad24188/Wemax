@@ -9,7 +9,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/_50sdp"
         android:layout_alignParentTop="true"
         app:cardElevation="@dimen/_10sdp">
 
@@ -111,9 +111,9 @@
                 android:id="@+id/recycler_invite"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_below="@id/tv_resultfound"
                 android:layout_marginTop="@dimen/_4sdp"
-                android:layout_marginBottom="@dimen/_12sdp"
-                android:layout_below="@id/tv_resultfound" />
+                android:layout_marginBottom="@dimen/_12sdp" />
         </RelativeLayout>
 
 </RelativeLayout>

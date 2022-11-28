@@ -38,7 +38,7 @@ class GroupInfoActivity : AppCompatActivity() {
     private fun onClicks() {
         binding.myFriendsRecycler.layoutManager = LinearLayoutManager(contextActivity)
         initRecyclerView()
-        binding.myFriendsRecycler.adapter = SelectFriendsAdapter(contextActivity, listMyFriends)
+        binding.myFriendsRecycler.adapter = SelectFriendsAdapter(contextActivity, listMyFriends,layoutInflater)
 
         binding.addParticipentsLayout.setOnClickListener {
             startActivity(Intent(contextActivity, AddParticipantsActivity::class.java))

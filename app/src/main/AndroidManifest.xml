@@ -26,6 +26,12 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".Activity.calendarReminder.CalenderAccessActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.home.event.FIndActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.home.event.AddYourOwnActivity2"
             android:exported="false" />
         <activity
@@ -74,7 +80,7 @@
         <activity
             android:name=".activity.home.SearchActivity"
             android:exported="true"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".activity.groups.UserProfileActivity"
             android:exported="true"
@@ -187,10 +193,7 @@
             android:name=".activity.auth.CompleteProfileActivity"
             android:exported="true"
             android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
         </activity>
         <activity
             android:name=".activity.auth.SignUpActivity"
@@ -244,6 +247,10 @@
             android:name=".activity.home.event.CreateEventActivity"
             android:exported="true"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.home.event.NewEventChatActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
         <!--
         <activity
             android:name=".SplashSliderActivity"
@@ -257,7 +264,7 @@
             android:name=".ServiceDetialsActivity"
             android:exported="true"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.Wemax.NoActionBarAndStatusBar" />
+            android:theme="@style/Theme.Wemax.NoActionBarAndStatusBar"></activity>
         <activity
             android:name=".activity.AddressesActivity"
             android:exported="true"
@@ -291,8 +298,15 @@
             android:name="com.wemax.mtech.SplashActivity"
             android:exported="true"
             android:screenOrientation="portrait">
-
+            <!--<intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>-->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
+
     </application>
 
 </manifest>

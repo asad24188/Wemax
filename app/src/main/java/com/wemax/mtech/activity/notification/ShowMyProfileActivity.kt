@@ -16,6 +16,7 @@ class ShowMyProfileActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding=ActivityShowMyProfileBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
         binding.editImage.setOnClickListener {
             ImagePicker.with(this)
                 .crop()                    //Crop image(Optional), Check Customization for more option

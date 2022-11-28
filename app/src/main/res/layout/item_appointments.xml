@@ -10,28 +10,31 @@
     <LinearLayout
         android:id="@+id/priceDetails"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/_47sdp"
+        android:background="@drawable/bg_price_border"
         android:orientation="vertical"
-        android:paddingVertical="@dimen/_5sdp"
+        android:gravity="center_vertical"
         android:paddingHorizontal="@dimen/_10sdp"
-        android:background="@drawable/bg_price_border">
+        android:paddingVertical="@dimen/_5sdp">
 
         <TextView
             android:id="@+id/date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_regular"
-            android:text="July 5"
             android:includeFontPadding="false"
+            android:text="July 5"
             android:textColor="@color/blue"
             android:textSize="@dimen/_10ssp" />
+
         <TextView
             android:id="@+id/time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_regular"
-            android:text="10:30 -11:00 Am"
             android:includeFontPadding="false"
+            android:text="10:30 -11:00 Am"
+            android:layout_marginTop="@dimen/_2sdp"
             android:textColor="@color/black"
             android:textSize="@dimen/_8ssp" />
 

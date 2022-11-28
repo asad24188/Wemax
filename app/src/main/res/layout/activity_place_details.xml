@@ -501,7 +501,7 @@
                     android:fontFamily="@font/poppins_light"
                     android:text="Bloomington Beauty Salon"
                     android:textColor="@color/black"
-                    android:textSize="@dimen/_11sdp" />
+                    android:textSize="@dimen/_10sdp" />
 
             </LinearLayout>
 
@@ -510,9 +510,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_5sdp"
-                android:layout_marginBottom="@dimen/_10sdp"
-                android:paddingHorizontal="@dimen/_10sdp"
-                tools:listitem="@layout/item_home_fragment_services" />
+                android:layout_marginBottom="@dimen/_10sdp"/>
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>

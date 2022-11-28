@@ -12,10 +12,12 @@ import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.LinearSnapHelper
 import com.wemax.mtech.activity.NewEditReminderActivity
+import com.wemax.mtech.Activity.calendarReminder.CalenderAccessActivity
 import com.wemax.mtech.Adapter.calendarReminder.calendar.CalendarAdapter
 import com.wemax.mtech.Adapter.calendarReminder.calendar.CalendarRemindersAdapter
 import com.wemax.mtech.Model.calendarReminder.CalendarReminderModel
 import com.wemax.mtech.R
+import com.wemax.mtech.activity.notification.MyAppointmentsActivity
 import com.wemax.mtech.databinding.FragmentCalendarBinding
 import java.text.SimpleDateFormat
 import java.util.*
@@ -123,7 +125,36 @@ class CalendarFragment : Fragment() {
                     setUpCalendar(changeMonth = cal)
             }
         }
-
+        binding.floatbtnLayout.setOnClickListener {
+            if (binding.fabOptions.visibility==View.GONE){
+                binding.fabOptions.visibility=View.VISIBLE
+                binding.backLayout.visibility=View.VISIBLE
+            }else{
+                binding.fabOptions.visibility=View.GONE
+                binding.backLayout.visibility=View.GONE
+            }
+        }
+        binding.backLayout.setOnClickListener {
+            if (binding.fabOptions.visibility==View.GONE){
+                binding.fabOptions.visibility=View.VISIBLE
+                binding.backLayout.visibility=View.VISIBLE
+            }else{
+                binding.fabOptions.visibility=View.GONE
+                binding.backLayout.visibility=View.GONE
+            }
+        }
+        binding.createEvent.setOnClickListener {
+            startActivity(Intent(context, NewEditReminderActivity::class.java)
+                .addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION))
+        }
+        binding.bookAppointment.setOnClickListener {
+            startActivity(Intent(context, MyAppointmentsActivity::class.java)
+                .addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION))
+        }
+        binding.findActivity.setOnClickListener {
+            startActivity(Intent(context, CalenderAccessActivity::class.java)
+                .addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION))
+        }
 
         binding.nextWeekAction!!.setOnClickListener {
             if (cal.before(lastDayInCalendar)) {

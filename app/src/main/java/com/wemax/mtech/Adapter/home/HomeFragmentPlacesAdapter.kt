@@ -11,7 +11,7 @@ import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.wemax.mtech.Model.groups.PostModel
 import com.wemax.mtech.R
-import com.wemax.mtech.ServiceDetialsActivity
+import com.wemax.mtech.activity.home.PlaceDetailsActivity
 
 class HomeFragmentPlacesAdapter(val context: Context, val booking: List<PostModel>) :
     RecyclerView.Adapter<HomeFragmentPlacesAdapter.myViewHolder>() {
@@ -36,7 +36,7 @@ class HomeFragmentPlacesAdapter(val context: Context, val booking: List<PostMode
         holder.providerName.text = obj.postTitle
         holder.providerRating.text = obj.postRating
         holder.parentProductDetail.setOnClickListener {
-            context.startActivity(Intent(context, ServiceDetialsActivity::class.java))
+            context.startActivity(Intent(context, PlaceDetailsActivity::class.java))
 
         }
     }

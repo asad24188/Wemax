@@ -30,10 +30,12 @@ import com.wemax.mtech.activity.home.serviceDetails.SelectDateTimeActivity
 import com.wemax.mtech.Adapter.ChipsAdapter
 import com.wemax.mtech.Adapter.home.event.LabelsBringingListAdapter
 import com.wemax.mtech.Adapter.home.event.UsersGoingAdapter
+import com.wemax.mtech.Fragment.calendar.activities.CalendarEventActivity
 import com.wemax.mtech.Model.ChipsTagsModel
 import com.wemax.mtech.Model.home.event.BringingModelClass
 import com.wemax.mtech.Model.home.event.UsersGoingModelClass
 import com.wemax.mtech.R
+import com.wemax.mtech.activity.auth.HomeActivity
 import com.wemax.mtech.databinding.ActivityEventDetailsBinding
 
 class EventDetailsActivity : AppCompatActivity(), OnMapReadyCallback {
@@ -78,7 +80,23 @@ class EventDetailsActivity : AppCompatActivity(), OnMapReadyCallback {
 
         }
         binding.viewMyCalendar.setOnClickListener {
-            startActivity(Intent(this, SelectDateTimeActivity::class.java))
+
+            val fragment = "forum"
+            val intent = Intent(this, HomeActivity::class.java)
+            intent.putExtra("fragment", fragment)
+            startActivity(intent)
+            finishAffinity()
+//            startActivity(Intent(this, CalendarEventActivity::class.java))
+
+
+        }
+        binding.btnconfirm.setOnClickListener {
+
+            val fragment = "forum"
+            val intent = Intent(this, HomeActivity::class.java)
+            intent.putExtra("fragment", fragment)
+            startActivity(intent)
+            finishAffinity()
 
 
         }

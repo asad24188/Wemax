@@ -62,7 +62,7 @@
                 android:id="@+id/rvPhotos"
                 android:layout_width="match_parent"
                 tools:listitem="@layout/item_photo_gallery"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_20sdp"
                 android:layout_marginHorizontal="@dimen/_10sdp"/>
 

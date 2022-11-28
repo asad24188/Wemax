@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.wemax.mtech.Adapter.home.event.AcceptedAdapter
+import com.wemax.mtech.Adapter.home.event.AcceptedAdapter2
 import com.wemax.mtech.Model.AcceptedModel
 import com.wemax.mtech.R
 import com.wemax.mtech.databinding.ActivityAddParticipantsBinding
@@ -29,7 +30,7 @@ class AddParticipantsActivity : AppCompatActivity() {
         binding.backpress.setOnClickListener { finish() }
         binding.recyclerInvite.layoutManager = LinearLayoutManager(contextActivity)
         initRecyclerView()
-        binding.recyclerInvite.adapter = AcceptedAdapter(contextActivity, listGroupMembers)
+        binding.recyclerInvite.adapter = AcceptedAdapter2(contextActivity, listGroupMembers,layoutInflater)
     }
     private fun initRecyclerView() {
         listGroupMembers.add(

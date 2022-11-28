@@ -2,8 +2,8 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/parentProductDetail"
-    android:layout_width="@dimen/_120sdp"
-    android:layout_height="@dimen/_130sdp"
+    android:layout_width="@dimen/_128sdp"
+    android:layout_height="@dimen/_135sdp"
     android:layout_marginVertical="@dimen/_6sdp"
     android:layout_marginStart="@dimen/_13sdp"
     app:cardCornerRadius="@dimen/_5sdp"
@@ -16,9 +16,9 @@
         <ImageView
             android:id="@+id/image"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_80sdp"
+            android:layout_height="@dimen/_85sdp"
             android:scaleType="fitXY"
-            android:src="@drawable/provider1" />
+            android:src="@drawable/eventparty_img" />
 
         <RelativeLayout
             android:layout_width="match_parent"
