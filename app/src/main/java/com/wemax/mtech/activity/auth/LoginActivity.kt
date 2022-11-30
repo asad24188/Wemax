@@ -13,51 +13,102 @@ import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
+import com.cheezycode.randomquote.viewmodels.MainViewModel
+import com.cheezycode.randomquote.viewmodels.MainViewModelFactory
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
+import com.google.gson.Gson
+import com.mtecsoft.swapme.view.activities.base.BaseActivity
 import com.remindrobort.app.utils.Utilities
+import com.wemax.mtech.Model.login.User
 import com.wemax.mtech.R
 import com.wemax.mtech.databinding.ActivityLoginBinding
+import com.wemax.mtech.repository.Response
+import com.wemax.mtech.utils.Constants
+import com.wemax.mtech.utils.WemaxApplication
 import java.util.*
 
+class LoginActivity : BaseActivity() {
 
-class LoginActivity : AppCompatActivity() {
-    lateinit var binding: ActivityLoginBinding
-    private lateinit var utilities: Utilities
-    private lateinit var mFusedLocationClient: FusedLocationProviderClient
-    var latitude = ""
-    var longitude = ""
+    private lateinit var binding: ActivityLoginBinding
+    private lateinit var mainViewModel: MainViewModel
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
         initViews()
         onClick()
 
+        mainViewModel.loginResponse.observe(this, androidx.lifecycle.Observer {
+            when(it){
+                is Response.Loading -> {
+                    utilities.showProgressDialog(context, Constants.LOADING)
+                }
+                is Response.Success -> {
+                    it.data?.let {
+                        utilities.hideProgressDialog()
+                        Toast.makeText(context, it.message, Toast.LENGTH_SHORT).show()
+                        if (it.status == true){
+                            saveUser(it.data)
+                            gotoHome()
+                        }
+
+                    }
+                }
+                is Response.Error -> {
+                    Toast.makeText(context, it.message, Toast.LENGTH_SHORT).show()
+                }
+            }
+        })
+
+    }
+
+    private fun saveUser(user: User) {
+        val gson = Gson()
+        val json = gson.toJson(user)
+        utilities.saveString(context, Constants.USER, json)
+        utilities.saveString(context,Constants.LOGGED_IN,Constants.TRUE)
+    }
+
+    private fun gotoHome() {
+
+        startActivity(Intent(context,HomeActivity::class.java)
+            .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
+            .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK))
     }
 
     private fun initViews() {
+
+        context = this
         utilities = Utilities(this@LoginActivity)
         utilities.setWhiteBars(this@LoginActivity)
-        mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
+        val repository = (application as WemaxApplication).authRepository
+        mainViewModel = ViewModelProvider(this, MainViewModelFactory(repository)).get(MainViewModel::class.java)
 
     }
 
     private fun onClick() {
 
         binding.btnlogin.setOnClickListener {
-            startActivity(Intent(this, HomeActivity::class.java))
-            finish()
-        }
+            var email = binding.edtEmail.text.toString()
+            var pass = binding.edtPassword.text.toString()
+            if (!email.isEmpty() && !pass.isEmpty()){
+                mainViewModel.login(email,pass)
+            }
 
+        }
         binding.btnSignup.setOnClickListener {
             startActivity(Intent(this, SignUpActivity::class.java))
         }
+
         binding.continueAsGuest.setOnClickListener {
             startActivity(Intent(this, HomeActivity::class.java))
         }
+
 
         binding.edtEmail.setOnFocusChangeListener(object : View.OnFocusChangeListener {
             override fun onFocusChange(v: View?, hasFocus: Boolean) {
@@ -80,49 +131,5 @@ class LoginActivity : AppCompatActivity() {
 
     }
 
-    override fun onResume() {
-        super.onResume()
-        getLocation()
-    }
-
-    private fun getLocation() {
-        if (utilities.isConnectingToInternet(this@LoginActivity))
-        {
-            if (isLocationEnabled()) {
-                mFusedLocationClient.lastLocation.addOnCompleteListener(this) { task ->
-                    val location: Location? = task.result
-                    if (location != null) {
-                        val geocoder = Geocoder(this, Locale.getDefault())
-                        val list: List<Address> = geocoder.getFromLocation(location.latitude, location.longitude, 1)
-                        binding.apply {
-                            latitude = list[0].latitude.toString()
-                            longitude = list[0].longitude.toString()
-                            if (!latitude.equals("")) {
-                                utilities.saveString(this@LoginActivity, "latitude", latitude)
-                                utilities.saveString(this@LoginActivity, "longitude", longitude)
-                                Log.d("lattttt", latitude)
-                                Log.d("longitude", longitude)
-                            }
-                        }
-                    }
-                }
-            } else {
-                Toast.makeText(this, "Please turn on location", Toast.LENGTH_LONG).show()
-                val intent = Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS)
-                startActivity(intent)
-            }
-        }else{
-            utilities.showFailureToast(this@LoginActivity,"Please Check Your Internet Connection")
-        }
-
-    }
-
-    private fun isLocationEnabled(): Boolean {
-        val locationManager: LocationManager =
-            getSystemService(Context.LOCATION_SERVICE) as LocationManager
-        return locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER) || locationManager.isProviderEnabled(
-            LocationManager.NETWORK_PROVIDER
-        )
-    }
 
 }

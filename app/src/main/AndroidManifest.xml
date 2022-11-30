@@ -18,6 +18,7 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
+        android:name=".utils.WemaxApplication"
         android:icon="@drawable/img_logo"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
@@ -290,21 +291,20 @@
         <activity
             android:name=".activity.auth.HomeActivity"
             android:exported="true"
-            android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan">
+
+
 
         </activity>
         <activity
             android:name="com.wemax.mtech.SplashActivity"
-            android:exported="true"
-            android:screenOrientation="portrait">
-            <!--<intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>-->
+            android:exported="true">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
 
     </application>

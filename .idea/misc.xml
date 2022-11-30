@@ -177,6 +177,9 @@
         <entry key="..\:/wemaxuserside/app/src/main/res/layout/item_slider_welcome_scr.xml" value="0.25416666666666665" />
         <entry key="..\:/wemaxuserside/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1745" />
         <entry key="..\:/wemaxuserside/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1745" />
+        <entry key="app/src/main/res/layout/activity_home.xml" value="0.18541666666666667" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.18541666666666667" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.18541666666666667" />
       </map>
     </option>
   </component>

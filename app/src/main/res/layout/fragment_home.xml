@@ -150,6 +150,7 @@
             android:paddingHorizontal="@dimen/_15sdp">
 
             <ImageView
+                android:id="@+id/logo"
                 android:layout_width="@dimen/_70sdp"
                 android:layout_height="@dimen/_30sdp"
                 android:layout_centerVertical="true"

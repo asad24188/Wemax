@@ -7,22 +7,20 @@ import android.os.Handler
 import android.os.Looper
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import com.mtecsoft.swapme.view.activities.base.BaseActivity
 import com.permissionx.guolindev.PermissionX
+import com.wemax.mtech.activity.auth.HomeActivity
 import com.wemax.mtech.activity.auth.WellcomeSliderActivity
+import com.wemax.mtech.utils.Constants
 
-class SplashActivity : AppCompatActivity() {
+class SplashActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR)
 
-
-
-
         initViews()
-
-
     }
 
 
@@ -47,10 +45,32 @@ class SplashActivity : AppCompatActivity() {
             .request { allGranted, grantedList, deniedList ->
                 if (allGranted) {
                     Handler(Looper.getMainLooper()).postDelayed({
-                        val intent = Intent(this, WellcomeSliderActivity::class.java)
-                        startActivity(intent)
-                        finish()
-                    }, 3000)
+
+                        var loggedIn = utilities.getString(context,Constants.LOGGED_IN)
+                        when(loggedIn){
+                            Constants.TRUE -> {
+
+                                val intent = Intent(this, HomeActivity::class.java)
+                                    .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+                                    .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                                startActivity(intent)
+                            }
+
+                            Constants.FALS -> {
+
+                                val intent = Intent(this, WellcomeSliderActivity::class.java)
+                                startActivity(intent)
+                                finish()
+                            }
+
+                             ""  -> {
+
+                                val intent = Intent(this, WellcomeSliderActivity::class.java)
+                                startActivity(intent)
+                                finish()
+                            }
+                        }
+                    }, 1000)
                 } else {
                     permissions()
                 }

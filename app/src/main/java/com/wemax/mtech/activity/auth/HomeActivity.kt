@@ -10,11 +10,14 @@ import com.wemax.mtech.databinding.ActivityHomeBinding
 
 
 class HomeActivity : AppCompatActivity() {
+
     lateinit var binding: ActivityHomeBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
         val intent=intent
         val fragmentName=intent.getStringExtra("fragment")
         val forum="forum"

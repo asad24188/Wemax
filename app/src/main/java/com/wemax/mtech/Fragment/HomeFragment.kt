@@ -14,7 +14,6 @@ import com.wemax.mtech.activity.auth.BusinessOwnerActivity
 import com.wemax.mtech.activity.home.BookAppointmentActivity
 import com.wemax.mtech.activity.home.SearchActivity
 import com.wemax.mtech.activity.home.event.CreateEventActivity
-import com.wemax.mtech.Activity.home.event.FIndActivity
 import com.wemax.mtech.Adapter.InviteFriendsAdapter
 import com.wemax.mtech.Adapter.groups.CustomSpinnerAdapter
 import com.wemax.mtech.Adapter.home.*
@@ -22,10 +21,14 @@ import com.wemax.mtech.Model.groups.PostModel
 import com.wemax.mtech.Model.home.HotEventsPostModel
 import com.wemax.mtech.Model.home.SearchModel
 import com.wemax.mtech.R
+import com.wemax.mtech.activity.auth.HomeActivity
+import com.wemax.mtech.activity.auth.LoginActivity
 import com.wemax.mtech.databinding.FragmentHomeBinding
 import java.util.*
+import kotlin.coroutines.coroutineContext
 
-class HomeFragment : Fragment() {
+class HomeFragment : BaseFragment() {
+
     lateinit var bottomNavigation: BottomNavigationView
     lateinit var newArrayList: ArrayList<PostModel>
     lateinit var newArrayList2: ArrayList<HotEventsPostModel>
@@ -47,6 +50,7 @@ class HomeFragment : Fragment() {
     )
 
     var privacyStr = ""
+    override fun getLayoutId(): Int = R.layout.fragment_home
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -65,6 +69,14 @@ class HomeFragment : Fragment() {
     }
 
     private fun onClicks() {
+
+        binding.logo.setOnClickListener {
+            utilities.clearSharedPref(context!!)
+            startActivity(Intent(context, LoginActivity::class.java)
+                .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+                .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK))
+        }
+
         binding.floatbtnLayout.setOnClickListener {
             if (binding.fabOptions.visibility==View.GONE){
                 binding.fabOptions.visibility=View.VISIBLE
@@ -97,9 +109,9 @@ class HomeFragment : Fragment() {
                 .addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION))
         }
         binding.findActivity.setOnClickListener {
-//            bottomNavigation.selectedItemId=R.id.searchFragment
-            startActivity(Intent(context, FIndActivity::class.java)
-                .addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION))
+
+//            startActivity(Intent(context, FIndActivity::class.java)
+//                .addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION))
         }
         searchAdapter()
         recommendedForYou()
