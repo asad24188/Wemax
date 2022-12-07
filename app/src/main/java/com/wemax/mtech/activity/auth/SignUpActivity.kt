@@ -15,6 +15,7 @@ import com.mtecsoft.swapme.view.activities.base.BaseActivity
 import com.remindrobort.app.utils.Utilities
 import com.wemax.mtech.Model.login.User
 import com.wemax.mtech.R
+import com.wemax.mtech.activity.MainActivity
 import com.wemax.mtech.databinding.ActivitySignUpBinding
 import com.wemax.mtech.repository.Response
 import com.wemax.mtech.utils.Constants
@@ -50,6 +51,7 @@ class SignUpActivity : BaseActivity() {
                     }
                 }
                 is Response.Error -> {
+                    utilities.hideProgressDialog()
                     Toast.makeText(context, it.message, Toast.LENGTH_SHORT).show()
                 }
             }
@@ -65,7 +67,7 @@ class SignUpActivity : BaseActivity() {
 
     private fun gotoHome() {
 
-        startActivity(Intent(context,HomeActivity::class.java)
+        startActivity(Intent(context, MainActivity::class.java)
             .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
             .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
             .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK))

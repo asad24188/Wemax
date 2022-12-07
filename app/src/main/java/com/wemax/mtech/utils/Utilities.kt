@@ -27,6 +27,8 @@ import androidx.core.content.ContextCompat.startActivity
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.FragmentManager
 import com.google.android.material.snackbar.Snackbar
+import com.google.gson.Gson
+import com.wemax.mtech.Model.login.User
 import com.wemax.mtech.R
 import org.aviran.cookiebar2.CookieBar
 import java.security.MessageDigest
@@ -244,6 +246,7 @@ class Utilities(context: Context) {
             .setSwipeToDismiss(true) // Deny dismiss by swiping off the view
             .show()
     }
+
     fun showSuccessToast(context: Activity?, title: String?, msg: String?) {
         CookieBar.build(context).setCustomView(R.layout.custom_banner)
             .setCustomViewInitializer { view: View ->
@@ -296,5 +299,15 @@ class Utilities(context: Context) {
     fun isValidEmail(target: CharSequence?): Boolean {
         return !TextUtils.isEmpty(target) && Patterns.EMAIL_ADDRESS.matcher(target!!).matches()
     }
+
+
+    fun getUserId(context: Context): String {
+        val sharedPref = context.getSharedPreferences("myAppSharedPreference", Context.MODE_PRIVATE)
+        val gsonn = Gson()
+        val myUser = gsonn.fromJson(sharedPref.getString("user", "").toString(), User::class.java)
+        val id = myUser.id.toString()
+        return id
+    }
+
 
 }

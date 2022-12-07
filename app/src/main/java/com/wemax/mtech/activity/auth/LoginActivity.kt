@@ -23,6 +23,7 @@ import com.mtecsoft.swapme.view.activities.base.BaseActivity
 import com.remindrobort.app.utils.Utilities
 import com.wemax.mtech.Model.login.User
 import com.wemax.mtech.R
+import com.wemax.mtech.activity.MainActivity
 import com.wemax.mtech.databinding.ActivityLoginBinding
 import com.wemax.mtech.repository.Response
 import com.wemax.mtech.utils.Constants
@@ -75,7 +76,7 @@ class LoginActivity : BaseActivity() {
 
     private fun gotoHome() {
 
-        startActivity(Intent(context,HomeActivity::class.java)
+        startActivity(Intent(context,MainActivity::class.java)
             .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
             .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
             .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK))
@@ -106,7 +107,7 @@ class LoginActivity : BaseActivity() {
         }
 
         binding.continueAsGuest.setOnClickListener {
-            startActivity(Intent(this, HomeActivity::class.java))
+            startActivity(Intent(this, MainActivity::class.java))
         }
 
 

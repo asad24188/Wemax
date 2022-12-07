@@ -14,10 +14,9 @@
         android:layout_height="match_parent">
 
         <ImageView
-            android:id="@+id/image"
+            android:id="@+id/serviceImage"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_85sdp"
-            android:scaleType="fitXY"
             android:src="@drawable/provider1" />
 
         <!--
@@ -33,12 +32,12 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/image"
+            android:layout_below="@+id/serviceImage"
             android:gravity="center_vertical"
             android:paddingVertical="@dimen/_5sdp">
 
             <TextView
-                android:id="@+id/postTitle"
+                android:id="@+id/serviceTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/_10sdp"
@@ -50,10 +49,10 @@
                 android:textSize="@dimen/_9ssp" />
 
             <TextView
-                android:id="@+id/postDistance"
+                android:id="@+id/serviceDistance"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/postTitle"
+                android:layout_below="@+id/serviceTitle"
                 android:layout_marginHorizontal="@dimen/_10sdp"
                 android:layout_marginTop="@dimen/_3sdp"
                 android:fontFamily="@font/poppins_light"
@@ -90,7 +89,7 @@
                     android:src="@drawable/ic_star" />
 
                 <TextView
-                    android:id="@+id/rating"
+                    android:id="@+id/serviceRating"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/_3sdp"

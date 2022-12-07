@@ -8,23 +8,31 @@ import android.widget.ImageView
 import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.viewpager.widget.PagerAdapter
+import com.bumptech.glide.Glide
+import com.wemax.mtech.Model.homeApi.*
 import com.wemax.mtech.R
+import com.wemax.mtech.utils.Constants
 
-class SliderAdapter : PagerAdapter {
-    var context: Context
-    var Images: Array<Int>
-    var Title: Array<String>
-    var Description: Array<String>
+class SliderAdapter(val context: Context,
+                    val action: String,
+                    val topSectionService : ArrayList<TopSectionService>,
+                    val mid_section_services: ArrayList<MidSectionService>,
+                    val bottomSectionService : ArrayList<BottomSectionService>) : PagerAdapter() {
+
     lateinit var inflater:LayoutInflater
+    override fun getCount(): Int {
 
-    constructor(context: Context, Images: Array<Int>,Title:Array<String>,Description:Array<String>) : super() {
-        this.context = context
-        this.Images = Images
-        this.Title = Title
-        this.Description = Description
+        when (action){
+
+            Constants.TOP_SLIDER -> { return topSectionService.size }
+
+            Constants.MID_SLIDER -> { return mid_section_services.size }
+
+            Constants.BOTTOM_SLIDER -> { return bottomSectionService.size }
+        }
+        return 0
+
     }
-
-    override fun getCount(): Int = Images.size
 
     override fun isViewFromObject(view: View, `object`: Any): Boolean =
         view ==  `object` as RelativeLayout
@@ -38,16 +46,41 @@ class SliderAdapter : PagerAdapter {
         image=view.findViewById(R.id.sliderImage)
         title=view.findViewById(R.id.imageTitle)
         description=view.findViewById(R.id.imageDescription)
-        image.setBackgroundResource(Images[position])
-        title.text= Title[position]
-        description.text= Description[position]
+
+        when (action){
+
+            Constants.TOP_SLIDER -> {
+
+                val obj = topSectionService.get(position)
+                Glide.with(context).load(obj.subcategory_image).into(image)
+                title.text= obj.service_title
+                description.text = obj.subcategory_name
+            }
+
+            Constants.MID_SLIDER -> {
+
+                val obj = mid_section_services.get(position)
+                Glide.with(context).load(obj.subcategory_image).into(image)
+                title.text= obj.service_title
+                description.text= obj.subcategory_name
+
+            }
+
+            Constants.BOTTOM_SLIDER -> {
+
+                val obj = bottomSectionService.get(position)
+                Glide.with(context).load(obj.subcategory_image).into(image)
+                title.text= obj.service_title
+                description.text= obj.subcategory_name
+            }
+        }
+
         container.addView(view)
         return view
     }
 
     override fun destroyItem(container: ViewGroup, position: Int, `object`: Any) {
         container.removeView(`object` as RelativeLayout)
-//        super.destroyItem(container, position, `object`)
     }
 
 }

@@ -9,6 +9,7 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.mtecsoft.swapme.view.activities.base.BaseActivity
 import com.permissionx.guolindev.PermissionX
+import com.wemax.mtech.activity.MainActivity
 import com.wemax.mtech.activity.auth.HomeActivity
 import com.wemax.mtech.activity.auth.WellcomeSliderActivity
 import com.wemax.mtech.utils.Constants
@@ -50,8 +51,8 @@ class SplashActivity : BaseActivity() {
                         when(loggedIn){
                             Constants.TRUE -> {
 
-                                val intent = Intent(this, HomeActivity::class.java)
-                                    .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+                                val intent = Intent(this, MainActivity::class.java)
+                                    .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                                     .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
                                 startActivity(intent)
                             }
@@ -63,7 +64,7 @@ class SplashActivity : BaseActivity() {
                                 finish()
                             }
 
-                             ""  -> {
+                            ""  -> {
 
                                 val intent = Intent(this, WellcomeSliderActivity::class.java)
                                 startActivity(intent)
