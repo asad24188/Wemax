@@ -27,4 +27,5 @@ object Constants {
     var MID_SLIDER                          = "MID_SLIDER"
     var BOTTOM_SLIDER                       = "BOTTOM_SLIDER"
 
+
 }

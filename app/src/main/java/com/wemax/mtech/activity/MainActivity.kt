@@ -44,7 +44,7 @@ class MainActivity : BaseActivity() {
             if (i == 0) {
                 tab_icon.setImageResource(R.drawable.ic_home)
                 tab_label.setText("Home")
-                tab_label.setTextColor(R.color.app_blue_color)
+                tab_label.setTextColor(Color.parseColor("#38A1F3"))
             }
             if (i == 1) {
                 tab_icon.setImageResource(R.drawable.search_icon)
@@ -79,7 +79,7 @@ class MainActivity : BaseActivity() {
                     tab_icon = tabView!!.findViewById(R.id.tab_icon)
                     tab_label = tabView.findViewById(R.id.tab_label)
                     tab_icon.setImageResource(R.drawable.ic_home)
-                    tab_label.setTextColor(R.color.app_blue_color)
+                    tab_label.setTextColor(Color.parseColor("#38A1F3"))
                 }
                 if (pos == 1) {
                     val tabb: TabLayout.Tab = binding.tabLayout.getTabAt(pos)!!
@@ -87,7 +87,7 @@ class MainActivity : BaseActivity() {
                     tab_label = tabView!!.findViewById(R.id.tab_label)
                     tab_icon = tabView.findViewById(R.id.tab_icon)
                     tab_icon.setImageResource(R.drawable.ic_search)
-                    tab_label.setTextColor(R.color.app_blue_color)
+                    tab_label.setTextColor(Color.parseColor("#38A1F3"))
                 }
                 if (pos == 2) {
                     val tabb: TabLayout.Tab = binding.tabLayout.getTabAt(pos)!!
@@ -95,7 +95,7 @@ class MainActivity : BaseActivity() {
                     tab_icon = tabView!!.findViewById(R.id.tab_icon)
                     tab_label = tabView.findViewById(R.id.tab_label)
                     tab_icon.setImageResource(R.drawable.ic_calanader)
-                    tab_label.setTextColor(R.color.app_blue_color)
+                    tab_label.setTextColor(Color.parseColor("#38A1F3"))
 
                 }
                 if (pos == 3) {
@@ -104,7 +104,7 @@ class MainActivity : BaseActivity() {
                     tab_icon = tabView!!.findViewById(R.id.tab_icon)
                     tab_label = tabView.findViewById(R.id.tab_label)
                     tab_icon.setImageResource(R.drawable.ic_chat)
-                    tab_label.setTextColor(R.color.app_blue_color)
+                    tab_label.setTextColor(Color.parseColor("#38A1F3"))
 
                 }
 
@@ -114,7 +114,7 @@ class MainActivity : BaseActivity() {
                     tab_icon = tabView!!.findViewById(R.id.tab_icon)
                     tab_label = tabView.findViewById(R.id.tab_label)
                     tab_icon.setImageResource(R.drawable.ic_notification)
-                    tab_label.setTextColor(R.color.app_blue_color)
+                    tab_label.setTextColor(Color.parseColor("#38A1F3"))
 
                 }
             }

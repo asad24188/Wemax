@@ -44,9 +44,6 @@ class HomeFragment : BaseFragment() {
 
     private val binding get() = _binding!!
     private var _binding: FragmentHomeBinding? = null
-    private lateinit var Images: Array<Int>
-    private lateinit var Title: Array<String>
-    private lateinit var Description: Array<String>
     private lateinit var adapter: PagerAdapter
     private lateinit var mainViewModel: MainViewModel
     private lateinit var timer: Timer
@@ -97,8 +94,17 @@ class HomeFragment : BaseFragment() {
                 is Response.Success -> {
                     it.data?.let {
                         utilities.hideProgressDialog()
-                        Toast.makeText(context, it.message, Toast.LENGTH_SHORT).show()
+                        showToast(it.message)
                         if (it.status == true){
+
+                            nearByProvider = ArrayList()
+                            eventsNextToMe = ArrayList()
+                            cleaningServiceAroundMe = ArrayList()
+                            peopleAlsoViewed = ArrayList()
+                            nailSalonsAroundMe = ArrayList()
+                            topSectionService = ArrayList()
+                            midSectionService = ArrayList()
+                            bottomSectionService = ArrayList()
 
                             binding.swipe.setRefreshing(false)
                             recommendedBusinesse = it.data.recommended_businesses
@@ -283,8 +289,6 @@ class HomeFragment : BaseFragment() {
                             userId = utilities.getUserId(context!!)
                             mainViewModel.home(userId,latitude,longitude)
                         }
-
-
                     }
                     if (report.isAnyPermissionPermanentlyDenied) {
                     }
@@ -304,15 +308,6 @@ class HomeFragment : BaseFragment() {
         recommendedBusinesse = ArrayList()
         hotEvent = ArrayList()
         activities = ArrayList()
-        nearByProvider = ArrayList()
-        eventsNextToMe = ArrayList()
-        cleaningServiceAroundMe = ArrayList()
-        peopleAlsoViewed = ArrayList()
-        nailSalonsAroundMe = ArrayList()
-        topSectionService = ArrayList()
-        midSectionService = ArrayList()
-        bottomSectionService = ArrayList()
-
 
         val repository = (activity!!.application as WemaxApplication).authRepository
         mainViewModel = ViewModelProvider(this, MainViewModelFactory(repository)).get(MainViewModel::class.java)
@@ -416,7 +411,7 @@ class HomeFragment : BaseFragment() {
             }
         }
         timer = Timer()
-        timer.schedule(timerTask, 2000, 2000)
+        timer.schedule(timerTask, 3000, 3000)
     }
 
     private fun nearByProvidersImageSlider() {
@@ -434,7 +429,7 @@ class HomeFragment : BaseFragment() {
             }
         }
         timer = Timer()
-        timer.schedule(timerTask, 2000, 2000)
+        timer.schedule(timerTask, 3000, 3000)
     }
 
     private fun cleaningServiceAroundMeImageSlider() {
@@ -452,6 +447,6 @@ class HomeFragment : BaseFragment() {
             }
         }
         timer = Timer()
-        timer.schedule(timerTask, 2000, 2000)
+        timer.schedule(timerTask, 3000, 3000)
     }
 }
