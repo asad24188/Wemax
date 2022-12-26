@@ -433,10 +433,8 @@ class HomeFragment : BaseFragment() {
     }
 
     private fun cleaningServiceAroundMeImageSlider() {
-
         adapter = SliderAdapter(requireContext(),Constants.BOTTOM_SLIDER, topSectionService, midSectionService, bottomSectionService)
         binding.viewPagerCleaingServiceAroundMe.adapter = adapter
-
         // timer code
         val timerTask: TimerTask = object : TimerTask() {
             override fun run() {
